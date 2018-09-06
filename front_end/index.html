@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>山西省矿山地质环境和资源数据展示系统</title>
+    <script src="http://api.tianditu.gov.cn/api?v=4.0&tk=ee71f58e38466326a9218cf3b4993bda" type="text/javascript"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="main.css">
+
+</head>
+
+<body>
+    <div class="webapp">
+
+        <div class="title-bar">
+            <div class="logo">logo&nbsp&nbsp&nbsp</div>
+            <div class="name">山西省矿山地质环境和资源数据展示系统</div>
+            <div class="search-container">
+                <input type="text">
+                <button>查询</button>
+            </div>
+        </div>
+        <div class="side-bar">
+            <button class="side-btn" id="zoomin">+</button><br>
+            <button class="side-btn" id="zoomout">-</button><br>
+            <button class="side-btn">*</button><br>
+            <button class="side-btn">@</button><br>
+        </div>
+        <div class="widgets">
+            <button class="widgets-btn">查询</button>
+            <button class="widgets-btn">属性</button>
+            <button class="widgets-btn">绘制</button>
+            <button class="widgets-btn">保存</button>
+
+        </div>
+        <div id="mapDiv"></div>
+
+    </div>
+
+<script>
+    var map;
+    var zoom = 10;
+    var shanxi = new T.LngLat(112.537674,37.871594)
+    function onLoad() {
+        map = new T.Map('mapDiv');
+        map.centerAndZoom(shanxi , zoom);
+
+        //添加比例尺控件
+        var scale = new T.Control.Scale();
+        map.addControl(scale);
+
+        //添加鹰眼
+        var miniMap = new T.Control.OverviewMap({
+            isOpen: true,
+            size: new T.Point(150, 150)
+        });
+        map.addControl(miniMap);
+
+        //添加地图选择
+        var ctrl = new T.Control.MapType();
+        map.addControl(ctrl);
+    }
+
+    window.onload = onLoad;
+
+    $('#zoomin').on('click',function () {
+        map.zoomIn();
+    });
+    $('#zoomout').on('click',function () {
+        map.zoomOut();
+    })
+
+
+</script>
+</body>
+</html>
