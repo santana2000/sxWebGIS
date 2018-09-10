@@ -21,6 +21,23 @@
         #viewDiv {
             height: 100%;
             width: 100%;
+            z-index: 1;
+        }
+
+        /*标题栏*/
+        .header {
+            width: 620px;
+            height: 70px;
+            color: aliceblue;
+            background: #53c3c8;
+            font-size: 1.6em;
+            border-radius:25px;
+            text-align: center;
+            line-height: 70px;
+            position: fixed;
+            top:35px;
+            left: 80px;
+            z-index: 2;
         }
     </style>
 
@@ -29,7 +46,7 @@
 <div class="container">
     <!--标题-->
     <div class="header">
-
+        山西省矿山地质环境和资源数据应用系统
     </div>
 
     <!--侧栏菜单（左边）-->
@@ -37,12 +54,17 @@
 
     </div>
 
-    <!--地图控件（右边）-->
+    <!--图层控制（浮动）-->
+    <div class="lyrControl">
+
+    </div>
+
+    <!--地图控件（右上角）-->
     <div class="mapControl">
         <div class="normalControl">
 
         </div>
-        <div class="changeMap">
+        <div class="tabMap">
 
         </div>
     </div>
@@ -56,19 +78,49 @@
 
     <script>
         require([
+            "esri/tasks/Locator",
+            "esri/widgets/CoordinateConversion",
             "esri/Map",
             "esri/views/MapView",
             "dojo/domReady!"
-        ], function(Map, MapView){
+        ], function(               //参数与调用对应
+            Locator,
+            CoordinateConversion,
+            Map,
+            MapView
+        ){
             var map = new Map({
-                basemap: "osm"
+                basemap: "topo"
             });
             var view = new MapView({
                 container: "viewDiv",  // Reference to the scene div created in step 5
                 map: map,  // Reference to the map object created before the scene
-                zoom: 8,  // Sets zoom level based on level of detail (LOD)
-                center: [112.537674, 37.871594]  // 112.537674,37.871594 Sets center point of view using longitude,latitude
+                zoom: 7,
+                center: [112.537674, 37.871594]  // 112.537674,37.871594
             });
+
+            var ccWidget = new CoordinateConversion({
+                view: view
+            });
+
+            view.ui.add(ccWidget, "top-right");
+
+            //-------点击显示经纬度-------
+            // view.on("click", function(event) {
+            //     event.stopPropagation(); // overwrite default click-for-popup behavior
+            //
+            //     // Get the coordinates of the click on the view
+            //     var lat = Math.round(event.mapPoint.latitude * 1000) / 1000;
+            //     var lon = Math.round(event.mapPoint.longitude * 1000) / 1000;
+
+                // view.popup.open({
+                //     // Set the popup's title to the coordinates of the location
+                //     title: "经纬度: [" + lon + ", " + lat + "]",
+                //     location: event.mapPoint            // Set the location of the popup to the clicked location
+                // });
+
+
+            //});
         });
     </script>
 </body>
