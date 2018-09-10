@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>山西省矿山地质环境和资源数据应用系统</title>
+    <link rel="stylesheet" href="https://js.arcgis.com/4.8/esri/css/main.css">
+    <script src="https://js.arcgis.com/4.8/"></script>
+
+    <style>
+        html,body {
+            padding: 0;
+            margin: 0;
+            height: 100%;
+            width: 100%;
+        }
+        .container {
+            height: 100%;
+            width: 100%;
+        }
+        #viewDiv {
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+
+</head>
+<body>
+<div class="container">
+    <!--标题-->
+    <div class="header">
+
+    </div>
+
+    <!--侧栏菜单（左边）-->
+    <div class="sideBar">
+
+    </div>
+
+    <!--地图控件（右边）-->
+    <div class="mapControl">
+        <div class="normalControl">
+
+        </div>
+        <div class="changeMap">
+
+        </div>
+    </div>
+
+    <!--地图容器（加载底图）-->
+    <div id="viewDiv">
+
+    </div>
+</div>
+
+
+    <script>
+        require([
+            "esri/Map",
+            "esri/views/MapView",
+            "dojo/domReady!"
+        ], function(Map, MapView){
+            var map = new Map({
+                basemap: "osm"
+            });
+            var view = new MapView({
+                container: "viewDiv",  // Reference to the scene div created in step 5
+                map: map,  // Reference to the map object created before the scene
+                zoom: 8,  // Sets zoom level based on level of detail (LOD)
+                center: [112.537674, 37.871594]  // 112.537674,37.871594 Sets center point of view using longitude,latitude
+            });
+        });
+    </script>
+</body>
+</html>
