@@ -84,12 +84,17 @@
         require([
             "esri/tasks/Locator",
             "esri/widgets/CoordinateConversion",
+            "esri/widgets/Compass",
+            "esri/widgets/ScaleBar",
             "esri/Map",
             "esri/views/MapView",
+
             "dojo/domReady!"
         ], function(               //参数与调用对应
             Locator,
             CoordinateConversion,
+            Compass,
+            ScaleBar,
             Map,
             MapView
         ){
@@ -103,13 +108,34 @@
                 center: [112.537674, 37.871594]  // 112.537674,37.871594
             });
 
+            //------------比例尺--------------
+            var scaleBar = new ScaleBar({
+                view: view,
+                unit: "metric",// The scale bar displays both metric and non-metric units.
+                //style:"ruler"
+            });
+            view.ui.add(scaleBar, "bottom-right");
+
+            //-----------位置坐标--------------
             var ccWidget = new CoordinateConversion({
                 view: view
             });
+            view.ui.add(ccWidget, "bottom-left");
 
-            view.ui.add(ccWidget, "top-right");
+
+
             view.ui.move("zoom", "top-right");
+            var compassWidget = new Compass({
+                view: view
+            });
+            view.ui.add(compassWidget, "top-right");
+
+
+
+
+
             //view.ui.add(zoom, "top-right");
+            view.ui.add('scale', "top-right");
 
             //-------点击显示经纬度-------
             // view.on("click", function(event) {
