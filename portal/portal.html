@@ -36,7 +36,7 @@
             line-height: 70px;
             position: fixed;
             top:35px;
-            left: 80px;
+            left: 60px;
             z-index: 2;
         }
     </style>
@@ -51,6 +51,10 @@
 
     <!--侧栏菜单（左边）-->
     <div class="sideBar">
+        <!--<ul class="gisFunc">-->
+            <!--<li>地理分析</li>-->
+            <!--<li>成果输出</li>-->
+        <!--</ul>-->
 
     </div>
 
@@ -104,6 +108,8 @@
             });
 
             view.ui.add(ccWidget, "top-right");
+            view.ui.move("zoom", "top-right");
+            //view.ui.add(zoom, "top-right");
 
             //-------点击显示经纬度-------
             // view.on("click", function(event) {
