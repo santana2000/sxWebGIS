@@ -6,6 +6,7 @@
     <title>山西省矿山地质环境和资源数据应用系统</title>
     <link rel="stylesheet" href="https://js.arcgis.com/4.8/esri/css/main.css">
     <script src="https://js.arcgis.com/4.8/"></script>
+    <script src="js/jquery.js"></script>
 
     <style>
         html,body {
@@ -29,9 +30,9 @@
             width: 620px;
             height: 70px;
             color: aliceblue;
-            background: #53c3c8;
+            background: #38aeec;
             font-size: 1.6em;
-            border-radius:25px;
+            border-radius:20px;
             text-align: center;
             line-height: 70px;
             position: fixed;
@@ -39,7 +40,35 @@
             left: 60px;
             z-index: 2;
         }
+        .gisFunc {
+            width: 140px;
+            height: 300px;
+            padding: 20px 0px 20px 0px;
+            position: fixed;
+            top: 200px;
+            left: 60px;
+            z-index: 3;
+
+            border-radius:10px;
+            color: aliceblue;
+            font-size: 1.2em;
+            text-align: center;
+            background: #38aeec;
+            list-style: none;
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.36);
+
+        }
+        .gis {
+            margin: 10px auto;
+            height: 60px;
+            line-height: 60px;
+
+        }
+        .gis:hover {
+            background: #3798d4;
+        }
     </style>
+
 
 </head>
 <body>
@@ -51,10 +80,12 @@
 
     <!--侧栏菜单（左边）-->
     <div class="sideBar">
-        <!--<ul class="gisFunc">-->
-            <!--<li>地理分析</li>-->
-            <!--<li>成果输出</li>-->
-        <!--</ul>-->
+        <ul class="gisFunc">
+            <li class="gis">地理分析</li>
+            <li class="gis">成果输出</li>
+            <li class="gis">成果输出</li>
+            <li class="gis">成果输出</li>
+        </ul>
 
     </div>
 
@@ -81,6 +112,7 @@
 
 
     <script>
+
         require([
             "esri/tasks/Locator",
             "esri/widgets/CoordinateConversion",
@@ -108,21 +140,20 @@
                 center: [112.537674, 37.871594]  // 112.537674,37.871594
             });
 
-            //------------比例尺--------------
+
+            //-----------位置坐标--------------
+            var ccWidget = new CoordinateConversion({
+                view: view
+            });
+            view.ui.add(ccWidget, "bottom-right");
+
+//------------比例尺--------------
             var scaleBar = new ScaleBar({
                 view: view,
                 unit: "metric",// The scale bar displays both metric and non-metric units.
                 //style:"ruler"
             });
             view.ui.add(scaleBar, "bottom-right");
-
-            //-----------位置坐标--------------
-            var ccWidget = new CoordinateConversion({
-                view: view
-            });
-            view.ui.add(ccWidget, "bottom-left");
-
-
 
             view.ui.move("zoom", "top-right");
             var compassWidget = new Compass({
@@ -154,6 +185,9 @@
 
             //});
         });
+
+        //----------jQuery入口-----------
+
     </script>
 </body>
 </html>
