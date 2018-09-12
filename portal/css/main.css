@@ -1,0 +1,76 @@
+html,body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+.container {
+    height: 100%;
+    width: 100%;
+}
+#viewDiv {
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+/*标题栏*/
+.header {
+    width: 620px;
+    height: 70px;
+    color: aliceblue;
+    background: #38aeec;
+    font-size: 1.6em;
+    border-radius:20px;
+    text-align: center;
+    line-height: 70px;
+    position: fixed;
+    top:35px;
+    left: 60px;
+    z-index: 2;
+}
+.gisFunc {
+    width: 140px;
+    padding: 10px 0px 10px 0px;
+    position: fixed;
+    top: 200px;
+    left: 60px;
+    z-index: 3;
+
+    border-radius:10px;
+    color: aliceblue;
+    font-size: 1.2em;
+    text-align: center;
+    background: #38aeec;
+    list-style: none;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.36);
+
+}
+.gis {
+    padding: 10px 0 10px 0;
+
+}
+.gis:hover {
+    background: #3798d4;
+}
+.analyse {
+    list-style: none;
+}
+.tools {
+    display: none;
+    color:#38aeec;
+    font-size: 0.8em;
+    list-style: none;
+    background: #d3dbe2;
+    padding-left: 35px;
+    text-align: left;
+}
+.analyse {
+    padding:5px 0 0 0;
+}
+.analyse>#1 {
+    padding-bottom: 5px;
+}
+.analyse>#2 {
+    padding-bottom: 5px;
+}

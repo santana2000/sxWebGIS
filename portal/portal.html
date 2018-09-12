@@ -5,72 +5,13 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>山西省矿山地质环境和资源数据应用系统</title>
     <link rel="stylesheet" href="https://js.arcgis.com/4.8/esri/css/main.css">
+    <link rel="stylesheet" href="css/main.css">
+
     <script src="https://js.arcgis.com/4.8/"></script>
     <script src="js/jquery.js"></script>
-
-    <style>
-        html,body {
-            padding: 0;
-            margin: 0;
-            height: 100%;
-            width: 100%;
-        }
-        .container {
-            height: 100%;
-            width: 100%;
-        }
-        #viewDiv {
-            height: 100%;
-            width: 100%;
-            z-index: 1;
-        }
-
-        /*标题栏*/
-        .header {
-            width: 620px;
-            height: 70px;
-            color: aliceblue;
-            background: #38aeec;
-            font-size: 1.6em;
-            border-radius:20px;
-            text-align: center;
-            line-height: 70px;
-            position: fixed;
-            top:35px;
-            left: 60px;
-            z-index: 2;
-        }
-        .gisFunc {
-            width: 140px;
-            height: 300px;
-            padding: 20px 0px 20px 0px;
-            position: fixed;
-            top: 200px;
-            left: 60px;
-            z-index: 3;
-
-            border-radius:10px;
-            color: aliceblue;
-            font-size: 1.2em;
-            text-align: center;
-            background: #38aeec;
-            list-style: none;
-            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.36);
-
-        }
-        .gis {
-            margin: 10px auto;
-            height: 60px;
-            line-height: 60px;
-
-        }
-        .gis:hover {
-            background: #3798d4;
-        }
-    </style>
-
-
 </head>
+
+
 <body>
 <div class="container">
     <!--标题-->
@@ -81,8 +22,18 @@
     <!--侧栏菜单（左边）-->
     <div class="sideBar">
         <ul class="gisFunc">
-            <li class="gis">地理分析</li>
-            <li class="gis">成果输出</li>
+            <li class="gis">地理分析
+                <ul class="tools">
+                    <li class="analyse">变化分析</li>
+                    <li class="analyse" id="1">核密度分析</li>
+                </ul>
+            </li>
+            <li class="gis">成果输出
+                <ul class="tools">
+                    <li class="analyse">地图输出</li>
+                    <li class="analyse" id="2">统计表输出</li>
+                </ul>
+            </li>
             <li class="gis">成果输出</li>
             <li class="gis">成果输出</li>
         </ul>
@@ -112,6 +63,7 @@
 
 
     <script>
+
 
         require([
             "esri/tasks/Locator",
@@ -147,10 +99,10 @@
             });
             view.ui.add(ccWidget, "bottom-right");
 
-//------------比例尺--------------
+            //------------比例尺--------------
             var scaleBar = new ScaleBar({
                 view: view,
-                unit: "metric",// The scale bar displays both metric and non-metric units.
+                unit: "metric"// The scale bar displays both metric and non-metric units.
                 //style:"ruler"
             });
             view.ui.add(scaleBar, "bottom-right");
@@ -162,32 +114,25 @@
             view.ui.add(compassWidget, "top-right");
 
 
-
-
-
             //view.ui.add(zoom, "top-right");
             view.ui.add('scale', "top-right");
 
-            //-------点击显示经纬度-------
-            // view.on("click", function(event) {
-            //     event.stopPropagation(); // overwrite default click-for-popup behavior
-            //
-            //     // Get the coordinates of the click on the view
-            //     var lat = Math.round(event.mapPoint.latitude * 1000) / 1000;
-            //     var lon = Math.round(event.mapPoint.longitude * 1000) / 1000;
 
-                // view.popup.open({
-                //     // Set the popup's title to the coordinates of the location
-                //     title: "经纬度: [" + lon + ", " + lat + "]",
-                //     location: event.mapPoint            // Set the location of the popup to the clicked location
-                // });
-
-
-            //});
         });
 
-        //----------jQuery入口-----------
+    </script>
+    <script>
+        $(function () {
+            $('.gis').on('click', function () {
+                if ($(this).children('.tools').is(':visible')) {
+                    $(this).children('.tools').slideUp();
+                   //测试 console.log($('.gis'));
 
+                } else {
+                    $(this).children('.tools').slideDown();
+                }
+            })
+        })
     </script>
 </body>
 </html>
