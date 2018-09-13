@@ -71,6 +71,7 @@
             "esri/widgets/Compass",
             "esri/widgets/ScaleBar",
             "esri/Map",
+            "esri/widgets/LayerList",
             "esri/views/MapView",
             "esri/layers/FeatureLayer",
 
@@ -81,6 +82,7 @@
             Compass,
             ScaleBar,
             Map,
+            LayerList,
             MapView,
             FeatureLayer
         ){
@@ -96,12 +98,24 @@
             });
 
             //图层  https://localhost:6443/arcgis/rest/services/test1/china/MapServer
-            var featureLayer = new FeatureLayer({
+            var chinaLayer = new FeatureLayer({
                 url: "https://localhost:6443/arcgis/rest/services/test1/china/MapServer"
             });
-            map.add(featureLayer);
+            map.add(chinaLayer);
 
+            var railLayer = new FeatureLayer({
+                url: "https://localhost:6443/arcgis/rest/services/test1/railway/MapServer"
+            });
+            map.add(railLayer);
 
+            view.when(function() {
+                var layerList = new LayerList({
+                    view: view
+                });
+
+                // Add widget to the top right corner of the view
+                view.ui.add(layerList, "top-right");
+            });
 
 
             //-----------位置坐标--------------
