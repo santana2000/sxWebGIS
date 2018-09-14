@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>jquery实现div拖拽</title>
+    <script src="../portal/js/jquery.js"></script>
+
+    <style type="text/css">
+        #moveBar {
+            position: absolute;
+            width: 200px;
+            height: 400px;
+            background: black;
+            color:white;
+            border: solid 1px #000;
+        }
+        #banner {
+            background: #ddd;
+            cursor: move;
+        }
+    </style>
+</head>
+<body>
+<div id="moveBar">
+    <div id="banner">按住鼠标移动当前div</div>
+    <div id="content">内容部分</div>
+</div>
+<script>
+    $(function () {
+        dragPanelMove("#banner","#moveBar");
+        function dragPanelMove(downDiv,moveDiv){
+            $(downDiv).mousedown(function (e) {
+                var isMove = true;
+                var div_x = e.pageX - $(moveDiv).offset().left;
+                var div_y = e.pageY - $(moveDiv).offset().top;
+                $(document).mousemove(function (e) {
+                    if (isMove) {
+                        var obj = $(moveDiv);
+                        obj.css({"left":e.pageX - div_x, "top":e.pageY - div_y});
+                    }
+                }).mouseup(
+                    function () {
+                        isMove = false;
+                    });
+            });
+
+        }
+
+    });
+</script>
+</body>
+</html>

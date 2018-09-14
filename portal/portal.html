@@ -22,6 +22,10 @@
     <!--侧栏菜单（左边）-->
     <div class="sideBar">
         <ul class="gisFunc">
+
+            <li class="gis">信息查询</li>
+            <li class="gis">基础统计</li>
+
             <li class="gis">地理分析
                 <ul class="tools">
                     <li class="analyse">变化分析</li>
@@ -34,8 +38,7 @@
                     <li class="analyse">统计表输出</li>
                 </ul>
             </li>
-            <li class="gis">成果输出</li>
-            <li class="gis">成果输出</li>
+
         </ul>
 
     </div>
@@ -97,10 +100,40 @@
                 center: [112.537674, 37.871594]  // 112.537674,37.871594
             });
 
-            var chinaLayer = new FeatureLayer({
-                url: "https://localhost:6443/arcgis/rest/services/test1/china/MapServer"
-            });
-            map.add(chinaLayer);
+            //-----------popup模板------------
+            var template ={
+                title:"矿山崩塌信息:",
+                content:[{
+                    type:"fields",
+                    fieldInfos:[{
+                        fieldName:"CREATEDATE",
+                        label:"采集日期",
+                        visible:true
+                    },{
+                        fieldName: "SLOPE_TYPE",
+                        label: "土质类型",
+                        visible: true,
+                        // format: {
+                        //     digitSeparator: true,
+                        //     places: 0
+                        // }
+
+                    },{
+                        fieldName:"COLLAPSE_T",
+                        label:"崩塌类型",
+                        visible:true
+                    },{
+                        fieldName:"MEMO",
+                        label:"崩塌描述",
+                        visible:true
+                    }]
+                }]
+            };
+
+            // var chinaLayer = new FeatureLayer({
+            //     url: "https://localhost:6443/arcgis/rest/services/test1/china/MapServer"
+            // });
+            // map.add(chinaLayer);
 
             var railLayer = new FeatureLayer({
                 url: "https://localhost:6443/arcgis/rest/services/test1/railway/MapServer"
@@ -108,7 +141,9 @@
             map.add(railLayer);
 
             var pointLayer = new FeatureLayer({
-                url: "https://localhost:6443/arcgis/rest/services/test1/point01/MapServer"
+                url: "https://localhost:6443/arcgis/rest/services/test1/point01/MapServer",
+                outFields: ["*"],
+                popupTemplate: template
             });
             map.add(pointLayer);
 
@@ -118,6 +153,7 @@
                 });
                 view.ui.add(layerList, "top-right");
             });
+
 
 
             //-----------位置坐标--------------
