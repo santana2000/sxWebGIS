@@ -16,17 +16,17 @@ html,body {
 
 /*标题栏*/
 .header {
-    width: 620px;
-    height: 70px;
-    color: aliceblue;
-    background: #38aeec;
+    width: 640px;
+    height: 80px;
+    color: white;
+    background: url("bg3.png");
     font-size: 1.6em;
-    border-radius:20px;
+    border-radius:10px;
     text-align: center;
     line-height: 70px;
     position: fixed;
-    top:35px;
-    left: 60px;
+    top:5px;
+    left: 5px;
     z-index: 2;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.36);
 }
@@ -34,35 +34,48 @@ html,body {
     width: 140px;
     padding: 10px 0px 10px 0px;
     position: fixed;
-    top: 200px;
-    left: 60px;
+    top: 250px;
+    left: 10px;
+    margin-top: 0;
     z-index: 3;
-
     border-radius:10px;
-    color: aliceblue;
+    color: #151719;
     font-size: 1.2em;
     text-align: center;
-    background: #38aeec;
+    background: rgba(0, 0, 0, 0.04);
+    /*border: black solid 0.1px;*/
     list-style: none;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.36);
 
+    display: none;
+
+}
+#switch {
+    position: fixed;
+    top: 200px;
+    left: 10px;
+    width: 50px;
+    height: 50px;
+    background-image: url("apply.png");
+    background-size: 50px 50px;
+    z-index: 3;
 }
 .gis {
     padding: 10px 0 10px 0;
 
 }
 .gis:hover {
-    background: #3798d4;
+    background: rgba(118, 114, 118, 0.53);
 }
 .analyse {
     list-style: none;
 }
 .tools {
     display: none;
-    color:#38aeec;
+    color: rgba(11, 25, 37, 0.87);
     font-size: 0.8em;
     list-style: none;
-    background: #d3dbe2;
+    background: rgba(166, 172, 178, 0.38);
     padding-left: 35px;
     padding-bottom: 5px;
     text-align: left;

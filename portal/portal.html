@@ -21,10 +21,22 @@
 
     <!--侧栏菜单（左边）-->
     <div class="sideBar">
+        <div id="switch">  </div>
         <ul class="gisFunc">
 
-            <li class="gis">信息查询</li>
-            <li class="gis">基础统计</li>
+            <li class="gis">信息查询
+                <ul class="tools">
+                    <li class="analyse">地图工具</li>
+                    <li class="analyse">图层控制</li>
+                </ul>
+            </li>
+            <li class="gis">基础统计
+                <ul class="tools">
+                    <li class="analyse">基本信息</li>
+                    <li class="analyse">生态影响</li>
+                    <li class="analyse">社会影响</li>
+                </ul>
+            </li>
 
             <li class="gis">地理分析
                 <ul class="tools">
@@ -191,6 +203,10 @@
                 } else {
                     $(this).children('.tools').slideDown();
                 }
+            })
+            
+            $('#switch').on('click',function () {
+                $('.gisFunc').slideToggle("normal");
             })
         })
     </script>
