@@ -27,7 +27,7 @@
             <li class="gis">信息查询
                 <ul class="tools">
                     <li class="analyse">地图工具</li>
-                    <li class="analyse">图层控制</li>
+                    <li class="analyse" id="lyr_c">图层控制</li>
                 </ul>
             </li>
             <li class="gis">基础统计
@@ -208,6 +208,11 @@
             $('#switch').on('click',function () {
                 $('.gisFunc').slideToggle("normal");
             })
+
+            $('#lyr_c').on('click',function () {
+                $('.esri-layer-list').slideToggle("normal");
+            })
+
         })
     </script>
 </body>

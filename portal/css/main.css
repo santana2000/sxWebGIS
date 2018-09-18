@@ -46,6 +46,7 @@ html,body {
     /*border: black solid 0.1px;*/
     list-style: none;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.36);
+    cursor: pointer;
 
     display: none;
 
@@ -83,8 +84,12 @@ html,body {
 .analyse {
     padding:5px 0 0 0;
 }
-.esri-component esri-layer-list esri-widget esri-widget--panel {
+.esri-layer-list {
+    color: #323232;
+    background-color: #f5f5f5;
+    padding: 6px 7px;
     position: fixed;
-    top:300px;
-    right: 400px;
+    top: 18px;
+    right: 76px;
+    display: none;
 }
