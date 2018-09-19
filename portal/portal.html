@@ -86,6 +86,8 @@
             "esri/widgets/Compass",
             "esri/widgets/ScaleBar",
             "esri/Map",
+            "esri/widgets/Print",
+            "esri/widgets/Print/TemplateOptions",
             "esri/widgets/LayerList",
             "esri/views/MapView",
             "esri/layers/FeatureLayer",
@@ -97,6 +99,8 @@
             Compass,
             ScaleBar,
             Map,
+            Print,
+            TemplateOptions,
             LayerList,
             MapView,
             FeatureLayer
@@ -164,6 +168,25 @@
                     view: view
                 });
                 view.ui.add(layerList, "top-right");
+
+                var templateOptions = new TemplateOptions({
+                    title: "My Print",
+                    author: "Sam",
+                    copyright: "Shanxi provience",
+                    format:"jpg",
+                    layout: "map-only",
+                    legendEnabled: false
+                });
+
+                var print = new Print({
+                    view: view,
+                    templateOptions:templateOptions,
+                    // specify your own print service
+                    printServiceUrl: "https://utility.arcgisonline.com/arcgis/rest/services/Utilities/PrintingTools/GPServer/Export%20Web%20Map%20Task"
+                });
+
+                // Add widget to the top right corner of the view
+                view.ui.add(print, "top-right");
             });
 
 
