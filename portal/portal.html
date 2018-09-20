@@ -46,7 +46,7 @@
             </li>
             <li class="gis">成果输出
                 <ul class="tools">
-                    <li class="analyse">地图输出</li>
+                    <li class="analyse" id="output">地图输出</li>
                     <li class="analyse">统计表输出</li>
                 </ul>
             </li>
@@ -91,6 +91,7 @@
             "esri/widgets/LayerList",
             "esri/views/MapView",
             "esri/layers/FeatureLayer",
+            "esri/layers/ImageryLayer",
 
             "dojo/domReady!"
         ], function(               //参数与调用对应
@@ -103,10 +104,12 @@
             TemplateOptions,
             LayerList,
             MapView,
-            FeatureLayer
+            FeatureLayer,
+            ImageryLayer
         ){
             var map = new Map({
-                basemap: "topo"
+                basemap: "topo",
+               // layers:[Layer2017]
             });
 
             var view = new MapView({
@@ -116,6 +119,12 @@
                 center: [112.537674, 37.871594]  // 112.537674,37.871594
             });
 
+            var Layer2017 = new ImageryLayer({
+                url: "https://localhost:6443/arcgis/rest/services/test1/Shanxi_2017N/ImageServer",
+                format: "jpgpng"
+
+            });
+            map.add(Layer2017,1);
             //-----------popup模板------------
             var template ={
                 title:"矿山崩塌信息:",
@@ -146,22 +155,25 @@
                 }]
             };
 
-            // var chinaLayer = new FeatureLayer({
-            //     url: "https://localhost:6443/arcgis/rest/services/test1/china/MapServer"
-            // });
-            // map.add(chinaLayer);
-
-            var railLayer = new FeatureLayer({
-                url: "https://localhost:6443/arcgis/rest/services/test1/railway/MapServer"
+            var chinaLayer = new FeatureLayer({
+                url: "https://localhost:6443/arcgis/rest/services/test1/china/MapServer"
             });
-            map.add(railLayer);
+            map.add(chinaLayer,0);
+
+            // var railLayer = new FeatureLayer({
+            //     url: "https://localhost:6443/arcgis/rest/services/test1/railway/MapServer"
+            // });
+            //map.add(railLayer);
+
+
 
             var pointLayer = new FeatureLayer({
                 url: "https://localhost:6443/arcgis/rest/services/test1/point01/MapServer",
                 outFields: ["*"],
                 popupTemplate: template
             });
-            map.add(pointLayer);
+            map.add(pointLayer,2);
+
 
             view.when(function() {
                 var layerList = new LayerList({
@@ -214,8 +226,8 @@
 
 
         });
-
     </script>
+
     <script>
         $(function () {
             $('.gis').on('click', function () {
@@ -226,15 +238,19 @@
                 } else {
                     $(this).children('.tools').slideDown();
                 }
-            })
+            });
             
             $('#switch').on('click',function () {
                 $('.gisFunc').slideToggle("normal");
-            })
+            });
 
             $('#lyr_c').on('click',function () {
                 $('.esri-layer-list').slideToggle("normal");
-            })
+            });
+
+            $('#output').on('click',function () {
+                $('.esri-print').slideToggle("normal");
+            });
 
         })
     </script>

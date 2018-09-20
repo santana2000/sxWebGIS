@@ -93,3 +93,9 @@ html,body {
     right: 76px;
     display: none;
 }
+.esri-print {
+    position: fixed;
+    top: 200px;
+    right: 76px;
+    display: none;
+}
