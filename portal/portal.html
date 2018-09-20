@@ -126,35 +126,45 @@
             });
             map.add(Layer2017,1);
             //-----------popup模板------------
-            var template ={
-                title:"矿山崩塌信息:",
-                content:[{
-                    type:"fields",
-                    fieldInfos:[{
-                        fieldName:"CREATEDATE",
-                        label:"采集日期",
-                        visible:true
-                    },{
+            var template = {
+                title: "矿山崩塌信息:",
+                content: [{
+                    type: "fields",
+                    fieldInfos: [{
+                        fieldName: "CREATEDATE",
+                        label: "采集日期",
+                        visible: true
+                    }, {
                         fieldName: "SLOPE_TYPE",
                         label: "土质类型",
                         visible: true,
-                        // format: {
-                        //     digitSeparator: true,
-                        //     places: 0
-                        // }
+                    }, {
+                        fieldName: "COLLAPSE_T",
+                        label: "崩塌类型",
+                        visible: true
+                    }, {
+                        fieldName: "MEMO",
+                        label: "崩塌描述",
+                        visible: true
+                    }]
+                },
 
-                    },{
-                        fieldName:"COLLAPSE_T",
-                        label:"崩塌类型",
-                        visible:true
-                    },{
-                        fieldName:"MEMO",
-                        label:"崩塌描述",
-                        visible:true
+                    {
+                    type: "text",
+                    text: "该区域土地利用类型是：{SLOPE_TYPE}"
+                 },
+                    {
+                    type: "media",
+                    mediaInfos: [{
+                        title: "<b>Welcome to Beverly Hills</b>",
+                        type: "image",
+                        value: {
+                            //sourceURL: "https://i.loli.net/2018/09/20/5ba39c600ad6c.png"
+                            sourceURL: "./css/矿大.png"
+                        }
                     }]
                 }]
-            };
-
+            }
             var chinaLayer = new FeatureLayer({
                 url: "https://localhost:6443/arcgis/rest/services/test1/china/MapServer"
             });
