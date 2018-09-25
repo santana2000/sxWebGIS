@@ -84,6 +84,16 @@ html,body {
 .analyse {
     padding:5px 0 0 0;
 }
+
+a {
+    text-decoration:none;
+}
+a:link {
+    color: rgba(11, 25, 37, 0.87);
+}
+a:visited {
+    color: rgba(11, 25, 37, 0.87);
+}
 .esri-layer-list {
     color: #323232;
     background-color: #f5f5f5;
@@ -98,4 +108,12 @@ html,body {
     top: 200px;
     right: 76px;
     display: none;
+}
+#ichart {
+    width: 600px;
+    height: 400px;
+    z-index: 5;
+    position: fixed;
+    top: 500px;
+    left: 500px;
 }

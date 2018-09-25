@@ -9,7 +9,10 @@
 
     <script src="https://js.arcgis.com/4.8/"></script>
     <script src="js/jquery.js"></script>
+    <script src="https://cdn.bootcss.com/echarts/4.1.0.rc2/echarts-en.common.js"></script>
+
     <script src="js/main.js"></script>
+
 </head>
 
 
@@ -48,7 +51,8 @@
             <li class="gis">成果输出
                 <ul class="tools">
                     <li class="analyse" id="output">地图输出</li>
-                    <li class="analyse">统计表输出</li>
+                    <li class="analyse"><a target="_blank" href="tongji.html" >统计表输出</a></li>
+
                 </ul>
             </li>
 
@@ -71,6 +75,12 @@
         </div>
     </div>
 
+    <!--echarts图表-->
+    <div id="ichart">
+
+    </div>
+
+
     <!--地图容器（加载底图）-->
     <div id="viewDiv">
 
@@ -78,6 +88,9 @@
 </div>
 
 
+<script>
 
+
+</script>
 </body>
 </html>

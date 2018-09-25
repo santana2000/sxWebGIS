@@ -10,6 +10,7 @@ require([
     "esri/views/MapView",
     "esri/layers/FeatureLayer",
     "esri/layers/ImageryLayer",
+    "esri/layers/GroupLayer",
 
     "dojo/domReady!"
 ], function (               //参数与调用对应
@@ -23,9 +24,10 @@ require([
     LayerList,
     MapView,
     FeatureLayer,
-    ImageryLayer) {
+    ImageryLayer,
+    GroupLayer) {
     var map = new Map({
-        basemap: "osm",
+        basemap: "topo",
 
     });
 
@@ -39,10 +41,11 @@ require([
     //遥感影像
     var Layer2017 = new ImageryLayer({
         url: "https://localhost:6443/arcgis/rest/services/test1/Shanxi_2017N/ImageServer",
-        format: "jpgpng"
+        format: "jpgpng",
+        title:"2017"
 
     });
-    map.add(Layer2017);
+
 
     //全国区划
     // var chinaLayer = new FeatureLayer({
@@ -91,18 +94,33 @@ require([
     }
 
     //全国铁路
-    // var railLayer = new FeatureLayer({
-    //     url: "https://localhost:6443/arcgis/rest/services/test1/railway/MapServer"
-    // });
-    //map.add(railLayer,1);
+    var railLayer = new FeatureLayer({
+        url: "https://localhost:6443/arcgis/rest/services/test1/railway/MapServer",
+        visible:false
+    });
+    map.add(railLayer,1);
 
     //崩塌实验
     var pointLayer = new FeatureLayer({
         url: "https://localhost:6443/arcgis/rest/services/test1/point01/MapServer",
         outFields: ["*"],
-        popupTemplate: template
+        popupTemplate: template,
+        title:"pt",
+        visible:false
+
     });
-    map.add(pointLayer);
+
+    //图层组控制
+    var demographicGroupLayer = new GroupLayer({
+        title: "山西省矿山数据图层",
+        visible: false,
+        visibilityMode: "exclusive",
+        layers: [pointLayer,Layer2017],
+        opacity: 0.75
+    });
+    map.add(demographicGroupLayer);
+
+
 
     view.when(function() {
 
@@ -181,4 +199,48 @@ require([
             $('.esri-print').slideToggle("normal");
         });
 
+        var myChart = echarts.init($('#ichart'));
+
+        var option = {
+            title : {
+                text: '某站点用户访问来源',
+                subtext: '纯属虚构',
+                x:'center'
+            },
+            tooltip : {
+                trigger: 'item',
+                formatter: "{a} <br/>{b} : {c} ({d}%)"
+            },
+            legend: {
+                orient: 'vertical',
+                left: 'left',
+                data: ['直接访问','邮件营销','联盟广告','视频广告','搜索引擎']
+            },
+            series : [
+                {
+                    name: '访问来源',
+                    type: 'pie',
+                    radius : '55%',
+                    center: ['50%', '60%'],
+                    data:[
+                        {value:335, name:'直接访问'},
+                        {value:310, name:'邮件营销'},
+                        {value:234, name:'联盟广告'},
+                        {value:135, name:'视频广告'},
+                        {value:1548, name:'搜索引擎'}
+                    ],
+                    itemStyle: {
+                        emphasis: {
+                            shadowBlur: 10,
+                            shadowOffsetX: 0,
+                            shadowColor: 'rgba(0, 0, 0, 0.5)'
+                        }
+                    }
+                }
+            ]
+        };
+        myChart.setOption(option);
+
     })
+
+//===============================================
