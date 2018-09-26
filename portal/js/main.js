@@ -122,33 +122,36 @@ require([
 
 
 
-    view.when(function() {
-
-        //图层控制
-        var layerList = new LayerList({
-            view: view
-        });
-        view.ui.add(layerList, "top-right");
-
-        //地图打印
-        var templateOptions = new TemplateOptions({
-            title: "My Print",
-            author: "Sam",
-            copyright: "Shanxi",
-            format:"pdf",
-            //layout: "map-only",
-            legendEnabled: false
-        });
-
-        var print = new Print({
-            view: view,
-            templateOptions:templateOptions,
-            printServiceUrl:
-                "https://utility.arcgisonline.com/arcgis/rest/services/Utilities/PrintingTools/GPServer/Export%20Web%20Map%20Task"
-        });
-
-        view.ui.add(print, "top-right");
+    // view.when(function() {
+    //
+    //     //图层控制
+    //
+    //
+    //
+    // });
+    //地图打印
+    var templateOptions = new TemplateOptions({
+        title: "My Print",
+        author: "Sam",
+        copyright: "Shanxi",
+        format:"pdf",
+        //layout: "map-only",
+        legendEnabled: false
     });
+
+    var print = new Print({
+        view: view,
+        templateOptions:templateOptions,
+        printServiceUrl:
+            "https://utility.arcgisonline.com/arcgis/rest/services/Utilities/PrintingTools/GPServer/Export%20Web%20Map%20Task"
+    });
+
+    view.ui.add(print, "top-right");
+
+    var layerList = new LayerList({
+        view: view
+    });
+    view.ui.add(layerList, "top-right");
 
     //-----------位置坐标--------------
     var ccWidget = new CoordinateConversion({
@@ -199,48 +202,49 @@ require([
             $('.esri-print').slideToggle("normal");
         });
 
-        var myChart = echarts.init($('#ichart'));
-
-        var option = {
-            title : {
-                text: '某站点用户访问来源',
-                subtext: '纯属虚构',
-                x:'center'
-            },
-            tooltip : {
-                trigger: 'item',
-                formatter: "{a} <br/>{b} : {c} ({d}%)"
-            },
-            legend: {
-                orient: 'vertical',
-                left: 'left',
-                data: ['直接访问','邮件营销','联盟广告','视频广告','搜索引擎']
-            },
-            series : [
-                {
-                    name: '访问来源',
-                    type: 'pie',
-                    radius : '55%',
-                    center: ['50%', '60%'],
-                    data:[
-                        {value:335, name:'直接访问'},
-                        {value:310, name:'邮件营销'},
-                        {value:234, name:'联盟广告'},
-                        {value:135, name:'视频广告'},
-                        {value:1548, name:'搜索引擎'}
-                    ],
-                    itemStyle: {
-                        emphasis: {
-                            shadowBlur: 10,
-                            shadowOffsetX: 0,
-                            shadowColor: 'rgba(0, 0, 0, 0.5)'
-                        }
-                    }
-                }
-            ]
-        };
-        myChart.setOption(option);
-
-    })
+    //     var myChart = echarts.init($('#ichart'));
+    //
+    //     var option = {
+    //         title : {
+    //             text: '某站点用户访问来源',
+    //             subtext: '纯属虚构',
+    //             x:'center'
+    //         },
+    //         tooltip : {
+    //             trigger: 'item',
+    //             formatter: "{a} <br/>{b} : {c} ({d}%)"
+    //         },
+    //         legend: {
+    //             orient: 'vertical',
+    //             left: 'left',
+    //             data: ['直接访问','邮件营销','联盟广告','视频广告','搜索引擎']
+    //         },
+    //         series : [
+    //             {
+    //                 name: '访问来源',
+    //                 type: 'pie',
+    //                 radius : '55%',
+    //                 center: ['50%', '60%'],
+    //                 data:[
+    //                     {value:335, name:'直接访问'},
+    //                     {value:310, name:'邮件营销'},
+    //                     {value:234, name:'联盟广告'},
+    //                     {value:135, name:'视频广告'},
+    //                     {value:1548, name:'搜索引擎'}
+    //                 ],
+    //                 itemStyle: {
+    //                     emphasis: {
+    //                         shadowBlur: 10,
+    //                         shadowOffsetX: 0,
+    //                         shadowColor: 'rgba(0, 0, 0, 0.5)'
+    //                     }
+    //                 }
+    //             }
+    //         ]
+    //     };
+    //     myChart.setOption(option);
+    //
+    //
+ })
 
 //===============================================
