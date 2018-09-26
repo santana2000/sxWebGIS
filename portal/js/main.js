@@ -110,43 +110,45 @@ require([
 
     });
 
-    //图层组控制
-    var demographicGroupLayer = new GroupLayer({
-        title: "山西省矿山数据图层",
-        visible: false,
-        visibilityMode: "exclusive",
-        layers: [pointLayer,Layer2017],
-        opacity: 0.75
+
+
+
+
+    view.when(function() {
+
+        //地图打印
+        var templateOptions = new TemplateOptions({
+            title: "My Print",
+            author: "Sam",
+            copyright: "Shanxi",
+            format:"pdf",
+            //layout: "map-only",
+            legendEnabled: false
+        });
+
+        var print = new Print({
+            view: view,
+            templateOptions:templateOptions,
+            printServiceUrl:
+                "https://utility.arcgisonline.com/arcgis/rest/services/Utilities/PrintingTools/GPServer/Export%20Web%20Map%20Task"
+        });
+
+        view.ui.add(print, "top-right");
+
+        //图层组控制
+        var demographicGroupLayer = new GroupLayer({
+            title: "山西省矿山数据图层",
+            visible: false,
+            visibilityMode: "exclusive",
+            layers: [pointLayer,Layer2017],
+            opacity: 0.75
+        });
+        map.add(demographicGroupLayer);
+
+
+
     });
-    map.add(demographicGroupLayer);
 
-
-
-    // view.when(function() {
-    //
-    //     //图层控制
-    //
-    //
-    //
-    // });
-    //地图打印
-    var templateOptions = new TemplateOptions({
-        title: "My Print",
-        author: "Sam",
-        copyright: "Shanxi",
-        format:"pdf",
-        //layout: "map-only",
-        legendEnabled: false
-    });
-
-    var print = new Print({
-        view: view,
-        templateOptions:templateOptions,
-        printServiceUrl:
-            "https://utility.arcgisonline.com/arcgis/rest/services/Utilities/PrintingTools/GPServer/Export%20Web%20Map%20Task"
-    });
-
-    view.ui.add(print, "top-right");
 
     var layerList = new LayerList({
         view: view
