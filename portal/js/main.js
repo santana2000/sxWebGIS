@@ -11,6 +11,8 @@ require([
     "esri/layers/FeatureLayer",
     "esri/layers/ImageryLayer",
     "esri/layers/GroupLayer",
+    "esri/layers/MapImageLayer",
+
 
     "dojo/domReady!"
 ], function (               //参数与调用对应
@@ -25,7 +27,8 @@ require([
     MapView,
     FeatureLayer,
     ImageryLayer,
-    GroupLayer) {
+    GroupLayer,
+    MapImageLayer) {
     var map = new Map({
         basemap: "topo",
 
@@ -109,51 +112,55 @@ require([
         visible:false
 
     });
+    map.add(pointLayer,2);
+
+    //online
+    // var censusLayer = new MapImageLayer({
+    //     url: "http://sampleserver6.arcgisonline.com/arcgis/rest/services/Census/MapServer",
+    //     title: "US Sample Census",
+    //     visible: false
+    // });
+    // map.add(censusLayer,3);
 
 
-
-
+    // //图层组控制
+    // var demographicGroupLayer = new GroupLayer({
+    //     title: "山西省矿山数据图层",
+    //     visible: false,
+    //     visibilityMode: "exclusive",
+    //     layers: [pointLayer,Layer2017],
+    //     opacity: 0.75
+    // });
+    // map.add(demographicGroupLayer);
 
     view.when(function() {
 
-        //地图打印
-        var templateOptions = new TemplateOptions({
-            title: "My Print",
-            author: "Sam",
-            copyright: "Shanxi",
-            format:"pdf",
-            //layout: "map-only",
-            legendEnabled: false
+        var print = new Print({
+             view: view,
+            //templateOptions:templateOptions,
+              //printServiceUrl: "https://utility.arcgisonline.com/arcgis/rest/services/Utilities/PrintingTools/GPServer/Export%20Web%20Map%20Task"
+             printServiceUrl: "https://localhost:6443/arcgis/rest/services/Utilities/PrintingTools/GPServer/Export%20Web%20Map%20Task"
+
+        });
+        var layerList = new LayerList({
+            view: view
         });
 
-        var print = new Print({
-            view: view,
-            templateOptions:templateOptions,
-            printServiceUrl:
-                "https://utility.arcgisonline.com/arcgis/rest/services/Utilities/PrintingTools/GPServer/Export%20Web%20Map%20Task"
-        });
+        // //地图打印
+        // var templateOptions = new TemplateOptions({
+        //     title: "My Print",
+        //     author: "Sam",
+        //     copyright: "Shanxi",
+        //     format:"pdf",
+        //     //layout: "map-only",
+        //     legendEnabled: false
+        // });
 
         view.ui.add(print, "top-right");
-
-        //图层组控制
-        var demographicGroupLayer = new GroupLayer({
-            title: "山西省矿山数据图层",
-            visible: false,
-            visibilityMode: "exclusive",
-            layers: [pointLayer,Layer2017],
-            opacity: 0.75
+        view.ui.add(layerList, "top-right");
         });
-        map.add(demographicGroupLayer);
 
 
-
-    });
-
-
-    var layerList = new LayerList({
-        view: view
-    });
-    view.ui.add(layerList, "top-right");
 
     //-----------位置坐标--------------
     var ccWidget = new CoordinateConversion({
