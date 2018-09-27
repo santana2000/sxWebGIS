@@ -10,6 +10,7 @@ require([
     "esri/views/MapView",
     "esri/layers/FeatureLayer",
     "esri/layers/ImageryLayer",
+
     "esri/layers/GroupLayer",
 
     "dojo/domReady!"
@@ -25,6 +26,7 @@ require([
     MapView,
     FeatureLayer,
     ImageryLayer,
+
     GroupLayer) {
 
     var map = new Map({
@@ -108,6 +110,7 @@ require([
         visible:false
     });
     map.add(Layer2017,2);
+
 
     //图层组控制
     var demoGroupLayer = new GroupLayer({
