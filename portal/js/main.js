@@ -26,6 +26,7 @@ require([
     FeatureLayer,
     ImageryLayer,
     GroupLayer) {
+
     var map = new Map({
         basemap: "topo",
 
@@ -37,7 +38,6 @@ require([
         zoom: 7,
         center: [112.537674, 37.871594]  // 112.537674,37.871594
     });
-
 
     //全国区划
     // var chinaLayer = new FeatureLayer({
@@ -104,7 +104,8 @@ require([
     var Layer2017 = new ImageryLayer({
         url: "https://localhost:6443/arcgis/rest/services/test1/Shanxi_2017N/ImageServer",
         format: "jpgpng",
-        title:"2017"
+        title:"2017",
+        visible:false
     });
     map.add(Layer2017,2);
 
@@ -127,8 +128,6 @@ require([
     // map.add(censusLayer,3);
 
 
-
-
     view.when(function() {
 
         var print = new Print({
@@ -138,7 +137,6 @@ require([
              printServiceUrl: "https://localhost:6443/arcgis/rest/services/Utilities/PrintingTools/GPServer/Export%20Web%20Map%20Task"
 
         });
-
 
 
         var layerList = new LayerList({
@@ -209,6 +207,21 @@ require([
         $('#output').on('click', function () {
             $('.esri-print').slideToggle("normal");
         });
+    })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     //     var myChart = echarts.init($('#ichart'));
     //
@@ -253,6 +266,6 @@ require([
     //     myChart.setOption(option);
     //
     //
- })
+
 
 //===============================================
