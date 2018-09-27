@@ -11,8 +11,6 @@ require([
     "esri/layers/FeatureLayer",
     "esri/layers/ImageryLayer",
     "esri/layers/GroupLayer",
-    "esri/layers/MapImageLayer",
-
 
     "dojo/domReady!"
 ], function (               //参数与调用对应
@@ -27,8 +25,7 @@ require([
     MapView,
     FeatureLayer,
     ImageryLayer,
-    GroupLayer,
-    MapImageLayer) {
+    GroupLayer) {
     var map = new Map({
         basemap: "topo",
 
@@ -41,20 +38,18 @@ require([
         center: [112.537674, 37.871594]  // 112.537674,37.871594
     });
 
-    //遥感影像
-    var Layer2017 = new ImageryLayer({
-        url: "https://localhost:6443/arcgis/rest/services/test1/Shanxi_2017N/ImageServer",
-        format: "jpgpng",
-        title:"2017"
-
-    });
-
 
     //全国区划
     // var chinaLayer = new FeatureLayer({
     //     url: "https://localhost:6443/arcgis/rest/services/test1/china/MapServer"
     // });
     // map.add(chinaLayer, 0);
+    //全国铁路
+    var railLayer = new FeatureLayer({
+        url: "https://localhost:6443/arcgis/rest/services/test1/railway/MapServer",
+        visible:false
+    });
+    //map.add(railLayer,1);
 
     //popup模板
     var template = {
@@ -95,14 +90,6 @@ require([
             }
             ]
     }
-
-    //全国铁路
-    var railLayer = new FeatureLayer({
-        url: "https://localhost:6443/arcgis/rest/services/test1/railway/MapServer",
-        visible:false
-    });
-    map.add(railLayer,1);
-
     //崩塌实验
     var pointLayer = new FeatureLayer({
         url: "https://localhost:6443/arcgis/rest/services/test1/point01/MapServer",
@@ -112,7 +99,24 @@ require([
         visible:false
 
     });
-    map.add(pointLayer,2);
+
+    //遥感影像
+    var Layer2017 = new ImageryLayer({
+        url: "https://localhost:6443/arcgis/rest/services/test1/Shanxi_2017N/ImageServer",
+        format: "jpgpng",
+        title:"2017"
+    });
+    map.add(Layer2017,2);
+
+    //图层组控制
+    var demoGroupLayer = new GroupLayer({
+        title: "山西省矿山数据图层",
+        visible: false,
+        visibilityMode: "exclusive",
+        layers: [pointLayer,railLayer],
+        opacity: 0.75
+    });
+    map.add(demoGroupLayer);
 
     //online
     // var censusLayer = new MapImageLayer({
@@ -123,25 +127,20 @@ require([
     // map.add(censusLayer,3);
 
 
-    // //图层组控制
-    // var demographicGroupLayer = new GroupLayer({
-    //     title: "山西省矿山数据图层",
-    //     visible: false,
-    //     visibilityMode: "exclusive",
-    //     layers: [pointLayer,Layer2017],
-    //     opacity: 0.75
-    // });
-    // map.add(demographicGroupLayer);
+
 
     view.when(function() {
 
         var print = new Print({
              view: view,
             //templateOptions:templateOptions,
-              //printServiceUrl: "https://utility.arcgisonline.com/arcgis/rest/services/Utilities/PrintingTools/GPServer/Export%20Web%20Map%20Task"
+            //printServiceUrl: "https://utility.arcgisonline.com/arcgis/rest/services/Utilities/PrintingTools/GPServer/Export%20Web%20Map%20Task"
              printServiceUrl: "https://localhost:6443/arcgis/rest/services/Utilities/PrintingTools/GPServer/Export%20Web%20Map%20Task"
 
         });
+
+
+
         var layerList = new LayerList({
             view: view
         });
