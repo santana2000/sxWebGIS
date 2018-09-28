@@ -4,14 +4,15 @@ require([
     "esri/widgets/Compass",
     "esri/widgets/ScaleBar",
     "esri/Map",
+    "esri/Basemap",
     "esri/widgets/Print",
     "esri/widgets/Print/TemplateOptions",
     "esri/widgets/LayerList",
     "esri/views/MapView",
     "esri/layers/FeatureLayer",
     "esri/layers/ImageryLayer",
-
     "esri/layers/GroupLayer",
+    "esri/layers/MapImageLayer",
 
     "dojo/domReady!"
 ], function (               //参数与调用对应
@@ -20,14 +21,27 @@ require([
     Compass,
     ScaleBar,
     Map,
+    Basemap,
     Print,
     TemplateOptions,
     LayerList,
     MapView,
     FeatureLayer,
     ImageryLayer,
+    GroupLayer,
+    MapImageLayer) {
 
-    GroupLayer) {
+    var mymapx =new FeatureLayer({
+        url:'http://cache1.arcgisonline.cn/arcgis/rest/services/ChinaOnlineCommunity/MapServer',
+
+    })
+
+    var mymap = new Basemap({
+        baseLayers: [ mymapx ],
+        // title: "Terrain",
+        // id: "terrain",
+        // thumbnailUrl: "https://stamen-tiles.a.ssl.fastly.net/terrain/10/177/409.png"
+    });
 
     var map = new Map({
         basemap: "topo",
@@ -40,6 +54,13 @@ require([
         zoom: 7,
         center: [112.537674, 37.871594]  // 112.537674,37.871594
     });
+
+    //dongtaituceng
+    var wLayer = new MapImageLayer({
+        url: "https://localhost:6443/arcgis/rest/services/w/MapServer",
+        visible:false
+    });
+    map.add(wLayer);
 
     //全国区划
     // var chinaLayer = new FeatureLayer({
