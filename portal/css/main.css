@@ -32,7 +32,7 @@ html,body {
 }
 .gisFunc {
     width: 150px;
-    padding: 10px 0px 10px 0px;
+    padding: 10px 0 10px 0;
     position: fixed;
     top: 250px;
     left: 10px;
@@ -113,3 +113,9 @@ a:visited {
     right: 76px;
     display: none;
 }
+
+
+/*添加详情*/
+/*.esri-feature__content-element {*/
+    /*padding: 0px 7px 24px;*/
+/*}*/

@@ -34,7 +34,7 @@ require([
     var mymapx =new FeatureLayer({
         url:'http://cache1.arcgisonline.cn/arcgis/rest/services/ChinaOnlineCommunity/MapServer',
 
-    })
+    });
 
     var mymap = new Basemap({
         baseLayers: [ mymapx ],
@@ -44,7 +44,7 @@ require([
     });
 
     var map = new Map({
-        basemap: "topo",
+        basemap: "osm",
 
     });
 
@@ -78,28 +78,34 @@ require([
     var template = {
         title: "矿山崩塌信息:",
         content: [{
-            type: "media",
-            mediaInfos: [{
-                title: "<b>土地崩塌</b>",
-                type: "image",
-                value: {
-                    //sourceURL: "https://i.loli.net/2018/09/20/5ba39c600ad6c.png"
-                    sourceURL: "./css/symbol01.png"
-                }
-            }]
-        },{
             type: "fields",
             fieldInfos: [{
-                fieldName: "CREATEDATE",
-                label: "采集日期",
+                fieldName: "RECID_NAME",
+                label: "所属矿山",
                 visible: true
             }, {
-                fieldName: "SLOPE_TYPE",
-                label: "土质类型",
+                fieldName: "HAPPEN_FLA",
+                label: "是否发生",
                 visible: true,
+            }, {
+                fieldName: "HAPPEN_DAT",
+                label: "发生时间",
+                visible: true
             }, {
                 fieldName: "COLLAPSE_T",
                 label: "崩塌类型",
+                visible: true
+            }, {
+                fieldName: "SLOPE_TYPE",
+                label: "斜坡类型",
+                visible: true
+            }, {
+                fieldName: "TOP_EVEVAT",
+                label: "斜坡高程",
+                visible: true
+            }, {
+                fieldName: "BUTTOM_EVE",
+                label: "坡底高程",
                 visible: true
             }, {
                 fieldName: "MEMO",
@@ -109,13 +115,36 @@ require([
            },
             {
                 type: "text",
-                text: "该区域土地利用类型是：{SLOPE_TYPE}"
+                text: "崩塌信息详情："
+            },{
+                type: "media",
+                mediaInfos: [{
+                    title: "<b>平面图</b>",
+                    type: "image",
+                    value: {
+
+
+                        //sourceURL: "./img/sximg/{PMTX_FILEI}_{PMTX}_看图王.jpg"
+                        sourceURL: "./img/sximg/2d129c5a15f14556be1de105298608f4_007-1_看图王.jpg"
+
+                    }
+                },{
+                    title: "<b>剖面图</b>",
+                    type: "image",
+                    value: {
+
+
+                        //sourceURL: "./img/sximg/{PMTX_FILEI}_{PMTX}_看图王.jpg"
+                        sourceURL: "./img/sximg/1b0ae76d4b394f54a5479bfde7377271_144-1_看图王.jpg"
+
+                    }
+                }]
             }
             ]
-    }
+    };
     //崩塌实验
     var pointLayer = new FeatureLayer({
-        url: "https://localhost:6443/arcgis/rest/services/test1/point01/MapServer",
+        url: "https://localhost:6443/arcgis/rest/services/sxlayer/landcollapse/MapServer",
         outFields: ["*"],
         popupTemplate: template,
         title:"pt",
@@ -201,7 +230,7 @@ require([
     view.ui.add('scale', "top-right");
 
 
-})
+});
 
     //jQuery制作左侧工具栏点击效果
     $(function () {
@@ -226,7 +255,7 @@ require([
         $('#output').on('click', function () {
             $('.esri-print').slideToggle("normal");
         });
-    })
+    });
 
 
 
