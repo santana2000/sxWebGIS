@@ -19,7 +19,7 @@ html,body {
     width: 640px;
     height: 80px;
     color: white;
-    background: url("bg3.png");
+    background: url("bg-image.png");
     font-size: 1.6em;
     border-radius:10px;
     text-align: center;
@@ -31,7 +31,7 @@ html,body {
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.36);
 }
 .gisFunc {
-    width: 140px;
+    width: 150px;
     padding: 10px 0px 10px 0px;
     position: fixed;
     top: 250px;
@@ -51,6 +51,10 @@ html,body {
     display: none;
 
 }
+.icons {
+    position: relative;
+    top: 7px;
+}
 #switch {
     position: fixed;
     top: 200px;
@@ -62,7 +66,7 @@ html,body {
     z-index: 3;
 }
 .gis {
-    padding: 10px 0 10px 0;
+    padding: 3px 0 10px 0;
 
 }
 .gis:hover {
@@ -108,12 +112,4 @@ a:visited {
     top: 200px;
     right: 76px;
     display: none;
-}
-#ichart {
-    width: 600px;
-    height: 400px;
-    z-index: 5;
-    position: fixed;
-    top: 500px;
-    left: 500px;
 }

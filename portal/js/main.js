@@ -55,7 +55,7 @@ require([
         center: [112.537674, 37.871594]  // 112.537674,37.871594
     });
 
-    //dongtaituceng
+    //动态图层
     var wLayer = new MapImageLayer({
         url: "https://localhost:6443/arcgis/rest/services/w/MapServer",
         visible:false
@@ -132,7 +132,6 @@ require([
     });
     map.add(Layer2017,2);
 
-
     //图层组控制
     var demoGroupLayer = new GroupLayer({
         title: "山西省矿山数据图层",
@@ -151,9 +150,7 @@ require([
     // });
     // map.add(censusLayer,3);
 
-
     view.when(function() {
-
         var print = new Print({
              view: view,
             //templateOptions:templateOptions,
@@ -161,7 +158,6 @@ require([
              printServiceUrl: "https://localhost:6443/arcgis/rest/services/Utilities/PrintingTools/GPServer/Export%20Web%20Map%20Task"
 
         });
-
 
         var layerList = new LayerList({
             view: view
@@ -180,7 +176,6 @@ require([
         view.ui.add(print, "top-right");
         view.ui.add(layerList, "top-right");
         });
-
 
 
     //-----------位置坐标--------------
