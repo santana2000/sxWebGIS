@@ -125,7 +125,7 @@ require([
 
 
                         //sourceURL: "./img/sximg/{PMTX_FILEI}_{PMTX}_看图王.jpg"
-                        sourceURL: "./img/sximg/2d129c5a15f14556be1de105298608f4_007-1_看图王.jpg"
+                        sourceURL: "./img/2d129c5a15f14556be1de105298608f4_007-1_看图王.jpg"
 
                     }
                 },{
@@ -135,7 +135,7 @@ require([
 
 
                         //sourceURL: "./img/sximg/{PMTX_FILEI}_{PMTX}_看图王.jpg"
-                        sourceURL: "./img/sximg/1b0ae76d4b394f54a5479bfde7377271_144-1_看图王.jpg"
+                        sourceURL: "./img/1b0ae76d4b394f54a5479bfde7377271_144-1_看图王.jpg"
 
                     }
                 }]
