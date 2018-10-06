@@ -1,0 +1,299 @@
+time,latitude,longitude,depth,mag,magType,nst,gap,dmin,rms,net,id,updated,place,type,horizontalError,depthError,magError,magNst,status,locationSource,magSource
+2018-10-06T01:23:57.450Z,29.1059,51.2736,10,4,mb,,92,6.041,0.98,us,us1000h7yt,2018-10-06T01:48:28.040Z,"18km SSE of Borazjan, Iran",earthquake,9.9,2,0.138,14,reviewed,us,us
+2018-10-06T01:15:26.320Z,20.0219994,-155.5700073,11.13,2.54,ml,38,183,0.12,0.38,hv,hv70634342,2018-10-06T01:42:40.040Z,"10km E of Waimea, Hawaii",earthquake,1.61,1.47,4.05,5,automatic,hv,hv
+2018-10-06T00:34:20.340Z,37.5412,15.022,7.74,4.6,mwr,,37,0.614,0.99,us,us1000h7ya,2018-10-06T01:50:50.693Z,"2km NNW of Misterbianco, Italy",earthquake,5.1,4.5,0.052,36,reviewed,us,us
+2018-10-05T22:19:26.150Z,19.1481,-66.1718,30,2.98,md,4,307,0.9905,0.32,pr,pr2018278012,2018-10-06T00:58:47.510Z,"75km N of San Juan, Puerto Rico",earthquake,2.55,23.02,0.11,2,reviewed,pr,pr
+2018-10-05T22:08:08.520Z,38.8526649,-122.7978363,1.46,2.59,md,30,104,0.01539,0.05,nc,nc73094101,2018-10-06T00:23:02.259Z,"7km WNW of Cobb, CA",earthquake,0.25,0.29,0.12,19,automatic,nc,nc
+2018-10-05T21:49:49.846Z,69.493,-144.3017,0,2.9,ml,,,,0.73,ak,ak20271818,2018-10-05T22:26:35.040Z,"75km SSW of Kaktovik, Alaska",earthquake,,0.7,,,automatic,ak,ak
+2018-10-05T21:40:55.513Z,69.5386,-144.2585,6.5,3.4,ml,,,,0.73,ak,ak20271812,2018-10-05T21:56:39.040Z,"70km SSW of Kaktovik, Alaska",earthquake,,0.8,,,automatic,ak,ak
+2018-10-05T21:23:15.140Z,-22.1337,169.4453,10,4.8,mb,,94,1.91,0.89,us,us1000h7vl,2018-10-05T21:36:43.040Z,"173km ESE of Tadine, New Caledonia",earthquake,8.3,1.9,0.098,32,reviewed,us,us
+2018-10-05T21:11:37.810Z,18.9978,-66.6045,47,2.89,md,7,311,0.6681,0.41,pr,pr2018278011,2018-10-06T00:58:34.118Z,"59km NNE of Arecibo, Puerto Rico",earthquake,4.31,9.66,0.12,5,reviewed,pr,pr
+2018-10-05T21:09:40.750Z,19.0405,-67.0586,27,2.48,md,4,354,0.5754,0.21,pr,pr2018278010,2018-10-06T00:58:23.118Z,"59km N of Isabela, Puerto Rico",earthquake,9.32,12.94,0.42,2,reviewed,pr,pr
+2018-10-05T21:08:27.890Z,-22.0465,169.6163,13.17,5.4,mww,,41,2.086,1.05,us,us1000h7v7,2018-10-05T22:19:04.040Z,"187km ESE of Tadine, New Caledonia",earthquake,6.8,3.1,0.065,23,reviewed,us,us
+2018-10-05T19:10:46.750Z,20.8843,121.7961,136.97,4.2,mb,,117,2.538,1.36,us,us1000h7tk,2018-10-05T20:22:51.040Z,"11km NNW of Itbayat, Philippines",earthquake,10,2.4,0.147,15,reviewed,us,us
+2018-10-05T18:20:50.410Z,18.8895,-67.271,10,2.93,md,7,327,0.4513,0.15,pr,pr2018278009,2018-10-05T22:46:51.570Z,"47km NNW of San Antonio, Puerto Rico",earthquake,1.4,0.66,0.14,6,reviewed,pr,pr
+2018-10-05T18:16:10.810Z,-42.6573,78.5785,10,5.2,mb,,45,8.868,0.67,us,us1000h7qa,2018-10-05T18:35:10.040Z,"Mid-Indian Ridge",earthquake,10.4,1.8,0.069,68,reviewed,us,us
+2018-10-05T17:54:06.420Z,61.3418,-146.8278,0,2.5,ml,,,,0.85,ak,ak20271525,2018-10-05T17:59:13.721Z,"34km NW of Valdez, Alaska",earthquake,,0.3,,,automatic,ak,ak
+2018-10-05T16:53:52.571Z,69.561,-144.163,0,2.6,ml,,,,0.71,ak,ak20271499,2018-10-05T18:28:53.040Z,"66km SSW of Kaktovik, Alaska",earthquake,,1.1,,,automatic,ak,ak
+2018-10-05T16:41:10.030Z,19.3783,-68.3295,49,3.2,md,3,348,1.8358,0.34,pr,pr2018278008,2018-10-05T22:46:01.105Z,"87km ENE of Miches, Dominican Republic",earthquake,8.05,28.98,0,3,reviewed,pr,pr
+2018-10-05T16:38:29.330Z,18.2311,-68.666,136,3.15,md,13,304,0.4012,0.37,pr,pr2018278006,2018-10-05T18:24:05.040Z,"6km SSE of Boca de Yuma, Dominican Republic",earthquake,4.57,1.54,0.56,11,reviewed,pr,pr
+2018-10-05T16:26:59.749Z,60.9888,-146.8132,20.6,2.9,ml,,,,0.58,ak,ak20271492,2018-10-05T18:22:07.040Z,"29km WSW of Valdez, Alaska",earthquake,,0.3,,,automatic,ak,ak
+2018-10-05T15:13:28.150Z,-5.6244,-11.37,10,5.2,mb,,59,13.836,0.86,us,us1000h7kj,2018-10-05T15:29:57.040Z,"Ascension Island region",earthquake,12.5,1.9,0.103,31,reviewed,us,us
+2018-10-05T14:59:44.630Z,-5.6465,-11.4955,10,5.6,mww,,34,3.64,1.44,us,us1000h7jc,2018-10-05T17:01:58.188Z,"Ascension Island region",earthquake,9.1,1.8,0.073,18,reviewed,us,us
+2018-10-05T13:37:07.070Z,19.628,-65.3533,46,3.14,md,9,331,1.5076,0.16,pr,pr2018278007,2018-10-05T17:07:01.250Z,"142km NNE of Vieques, Puerto Rico",earthquake,2.11,11.19,0.46,4,reviewed,pr,pr
+2018-10-05T13:29:37.550Z,36.7533333,-121.3536667,11.42,3.83,mw,87,42,0.07589,0.26,nc,nc73093981,2018-10-06T01:14:46.729Z,"5km SW of Tres Pinos, CA",earthquake,0.22,0.5,,8,reviewed,nc,nc
+2018-10-05T11:34:12.080Z,44.2873333,-114.9598333,5.19,2.46,ml,8,98,0.825,0.17,mb,mb80312489,2018-10-05T18:06:45.219Z,"62km WSW of Challis, Idaho",earthquake,0.58,1.66,0.13,13,reviewed,mb,mb
+2018-10-05T10:34:23.890Z,8.3967,-103.3064,10,4.6,mb,,210,10.213,1.17,us,us1000h7fq,2018-10-05T11:17:29.040Z,"Northern East Pacific Rise",earthquake,11.4,2,0.05,121,reviewed,us,us
+2018-10-05T08:19:21.120Z,19.0895,-67.6991,12,2.9,md,7,251,0.8559,0.3,pr,pr2018278005,2018-10-05T11:17:04.629Z,"91km NW of San Antonio, Puerto Rico",earthquake,3.02,4.56,0.2,5,reviewed,pr,pr
+2018-10-05T07:24:55.670Z,18.3725,-67.247,118,2.77,md,8,293,0.2544,0.34,pr,pr2018278003,2018-10-05T11:13:54.200Z,"3km N of Rincon, Puerto Rico",earthquake,4.57,1.68,0.13,6,reviewed,pr,pr
+2018-10-05T06:57:56.660Z,69.6439,-144.2862,0.1,2.6,ml,,,,0.83,ak,ak20271404,2018-10-05T07:01:24.103Z,"60km SSW of Kaktovik, Alaska",earthquake,,0.7,,,automatic,ak,ak
+2018-10-05T06:51:00.141Z,65.532,-166.731,5.9,2.7,ml,,,,0.83,ak,ak20271402,2018-10-05T18:06:47.643Z,"86km SSW of Shishmaref, Alaska",earthquake,,0.9,,,reviewed,ak,ak
+2018-10-05T05:51:43.771Z,65.5581,-166.7653,6,3.4,ml,,,,0.84,ak,ak20271396,2018-10-05T17:55:42.718Z,"85km SSW of Shishmaref, Alaska",earthquake,,0.4,,,reviewed,ak,ak
+2018-10-05T05:20:50.030Z,-18.2865,-178.2449,546.62,4.2,mb,,115,3.563,0.54,us,us1000h7ec,2018-10-05T06:40:49.040Z,"265km N of Ndoi Island, Fiji",earthquake,11.6,8.1,0.085,39,reviewed,us,us
+2018-10-05T03:56:58.250Z,18.69,-64.5245,46,3.12,md,4,346,1.4332,0.28,pr,pr2018278001,2018-10-06T01:52:02.040Z,"54km NNE of Road Town, British Virgin Islands",earthquake,5.87,17.21,0.17,3,reviewed,pr,pr
+2018-10-05T02:35:43.209Z,61.4503,-150.2098,35.5,2.9,ml,,,,0.63,ak,ak20271361,2018-10-05T02:52:30.040Z,"15km WSW of Big Lake, Alaska",earthquake,,0.9,,,automatic,ak,ak
+2018-10-05T01:56:35.820Z,-3.4337,149.6856,10,5,mb,,82,2.584,1.26,us,us1000h7di,2018-10-05T02:15:08.040Z,"155km SW of Kavieng, Papua New Guinea",earthquake,8.5,1.9,0.111,26,reviewed,us,us
+2018-10-05T01:55:41.440Z,19.3371667,-155.1955,6.36,2.87,ml,52,78,0.04103,0.08,hv,hv70632562,2018-10-05T18:40:37.998Z,"11km SSE of Volcano, Hawaii",earthquake,0.23,0.4,0.208,44,reviewed,hv,hv
+2018-10-05T01:46:01.210Z,-14.5368,-71.6018,10,5.3,mww,,60,3.657,1.34,us,us1000h7da,2018-10-05T18:54:42.975Z,"23km WSW of Checca, Peru",earthquake,7.7,1.9,0.071,19,reviewed,us,us
+2018-10-05T01:16:34.210Z,18.9798,-67.3178,6,2.9,md,5,317,0.5524,0.07,pr,pr2018278000,2018-10-05T04:50:50.287Z,"58km NNW of San Antonio, Puerto Rico",earthquake,1.04,1.04,0.11,4,reviewed,pr,pr
+2018-10-04T23:58:48.010Z,42.618,142.0556,12.05,5.4,mb,,33,1.015,0.84,us,us1000h7cn,2018-10-05T16:41:41.040Z,"37km E of Tomakomai, Japan",earthquake,6.9,3.3,0.027,457,reviewed,us,us
+2018-10-04T23:41:42.220Z,17.672,-64.14,7,2.53,md,6,212,1.1306,0.23,pr,pr2018277012,2018-10-05T04:49:51.894Z,"60km E of Christiansted, U.S. Virgin Islands",earthquake,7.03,2.24,0.1,3,reviewed,pr,pr
+2018-10-04T23:21:56.590Z,-22.8393,-66.3748,235.4,4.9,mb,,59,1.667,1.02,us,us1000h7c7,2018-10-04T23:34:54.040Z,"70km W of Abra Pampa, Argentina",earthquake,7.9,10.6,0.129,19,reviewed,us,us
+2018-10-04T23:20:05.042Z,60.1648,-151.2089,60.7,2.6,ml,,,,0.52,ak,ak20271246,2018-10-04T23:25:58.061Z,"23km SSE of Cohoe, Alaska",earthquake,,0.9,,,automatic,ak,ak
+2018-10-04T23:07:52.150Z,-5.9598,154.7495,166.94,4.8,mb,,93,3.117,1.06,us,us1000h7bz,2018-10-04T23:25:31.040Z,"90km WNW of Panguna, Papua New Guinea",earthquake,11,7.3,0.064,75,reviewed,us,us
+2018-10-04T22:44:33.410Z,26.5746,129.431,10,5,mww,,68,1.068,1.72,us,us1000h7bt,2018-10-04T23:08:21.040Z,"144km E of Nago, Japan",earthquake,4.8,1.9,0.071,19,reviewed,us,us
+2018-10-04T22:08:34.870Z,-1.2053,120.0587,10,4.5,mb,,87,2.411,1.28,us,us1000h7bb,2018-10-04T22:32:39.040Z,"40km SSE of Palu, Indonesia",earthquake,6.6,1.9,0.113,23,reviewed,us,us
+2018-10-04T19:59:41.360Z,13.0716,-81.1105,12.27,4.7,mb,,43,3.233,0.55,us,us1000h78n,2018-10-04T20:14:54.040Z,"42km SE of Mountain, Colombia",earthquake,6.2,5.9,0.05,120,reviewed,us,us
+2018-10-04T18:14:29.530Z,32.7348333,-118.3008333,10.45,2.96,ml,28,218,0.2389,0.21,ci,ci38315504,2018-10-05T13:51:57.827Z,"10km SSE of San Clemente Is. (SE tip), CA",earthquake,0.58,1.23,0.142,146,reviewed,ci,ci
+2018-10-04T17:58:26.540Z,32.7376667,-118.3026667,12.97,3.27,ml,27,196,0.2358,0.28,ci,ci38315368,2018-10-04T21:02:25.551Z,"10km SSE of San Clemente Is. (SE tip), CA",earthquake,0.62,1.62,0.185,142,reviewed,ci,ci
+2018-10-04T15:37:53.610Z,15.4274,-104.455,10,4.3,mb,,226,5.204,0.74,us,us1000h6zu,2018-10-05T14:35:52.040Z,"Off the coast of Michoacan, Mexico",earthquake,11.8,2,0.044,146,reviewed,us,us
+2018-10-04T14:03:28.866Z,54.9124,-158.2689,25.3,3.7,ml,,,,0.53,ak,ak20270949,2018-10-04T17:14:38.832Z,"88km E of Chernabura Island, Alaska",earthquake,,1.4,,,reviewed,ak,ak
+2018-10-04T13:57:19.880Z,2.161,128.5938,10,4.5,mb,,161,1.846,0.75,us,us1000h6yd,2018-10-04T15:58:57.040Z,"80km NE of Tobelo, Indonesia",earthquake,9.4,2,0.127,18,reviewed,us,us
+2018-10-04T13:29:18.660Z,19.4562,96.4059,50.52,4.5,mb,,113,1.432,0.73,us,us1000h6xu,2018-10-04T13:52:47.040Z,"36km SSE of Pyinmana, Burma",earthquake,8.4,10.6,0.145,14,reviewed,us,us
+2018-10-04T13:12:56.329Z,69.4225,-144.1679,3.9,3.8,ml,,,,0.67,ak,ak20270862,2018-10-04T17:07:35.096Z,"67km SSW of Kaktovik, Alaska",earthquake,,0.3,,,reviewed,ak,ak
+2018-10-04T13:04:34.122Z,37.3425,-115.0416,6.1,2.9,ml,41,72.08,0.065,0.1232,nn,nn00659590,2018-10-04T17:06:46.495Z,"14km ESE of Alamo, Nevada",earthquake,,1.4,0.31,25,reviewed,nn,nn
+2018-10-04T12:44:47.687Z,65.5797,-166.7619,9.2,3.6,ml,,,,0.66,ak,ak20270856,2018-10-04T17:00:55.883Z,"81km SSW of Shishmaref, Alaska",earthquake,,0.2,,,reviewed,ak,ak
+2018-10-04T11:44:14.630Z,32.7968333,-115.4501667,12.77,2.53,ml,41,41,0.008928,0.33,ci,ci37378794,2018-10-05T04:20:48.381Z,"7km WSW of Holtville, CA",earthquake,0.38,0.63,0.157,24,reviewed,ci,ci
+2018-10-04T10:14:04.710Z,32.8101667,-115.455,7.68,2.55,ml,30,55,0.008436,0.27,ci,ci37378738,2018-10-04T18:59:07.380Z,"7km W of Holtville, CA",earthquake,0.48,0.87,0.194,25,automatic,ci,ci
+2018-10-04T09:20:21.090Z,-3.0871,129.9527,26.14,4.6,mb,,105,2.299,1.12,us,us1000h6vz,2018-10-04T10:18:29.040Z,"118km ENE of Amahai, Indonesia",earthquake,6.1,6.6,0.108,26,reviewed,us,us
+2018-10-04T08:47:10.890Z,44.7535,-110.9843333,9.78,2.69,ml,30,47,0.01661,0.18,uu,uu60299487,2018-10-04T14:23:49.270Z,"13km NE of West Yellowstone, Montana",earthquake,0.31,0.47,0.14,7,reviewed,uu,uu
+2018-10-04T08:33:10.120Z,18.0898,-64.1876,66,3.03,md,12,173,1.0551,0.46,pr,pr2018277009,2018-10-04T11:41:41.979Z,"58km SE of Road Town, British Virgin Islands",earthquake,3.83,4.89,0.26,9,reviewed,pr,pr
+2018-10-04T08:20:53.520Z,31.0667,131.5259,45.98,4.4,mb,,131,2.125,0.61,us,us1000h6vj,2018-10-04T08:37:45.040Z,"51km SSE of Kushima, Japan",earthquake,8.1,8.7,0.149,13,reviewed,us,us
+2018-10-04T07:57:53.680Z,17.9815,-63.9876,133,4.11,md,25,162,0.9155,0.66,pr,pr2018277006,2018-10-04T08:30:03.252Z,"78km WNW of The Bottom, Bonaire, Saint Eustatius and Saba ",earthquake,4.68,3.11,0.35,25,reviewed,pr,pr
+2018-10-04T07:47:06.200Z,51.7152,-173.3208,38.93,4.2,mb,,176,0.729,0.9,us,us1000h6v4,2018-10-04T16:48:53.195Z,"80km SE of Atka, Alaska",earthquake,12.7,10.8,0.066,64,reviewed,us,us
+2018-10-04T07:30:00.842Z,61.2362,-150.6625,41.2,2.6,ml,,,,0.5,ak,ak20270810,2018-10-04T09:32:08.040Z,"40km W of Anchorage, Alaska",earthquake,,0.9,,,automatic,ak,ak
+2018-10-04T07:14:28.460Z,18.8741,-67.9858,133,3.11,md,8,202,0.535,0.42,pr,pr2018277008,2018-10-04T11:41:14.779Z,"54km NE of Punta Cana, Dominican Republic",earthquake,6.23,3.46,0.31,6,reviewed,pr,pr
+2018-10-04T07:08:17.070Z,36.9566,71.5667,129.71,4.4,mb,,73,0.577,0.5,us,us1000h6uq,2018-10-04T07:25:27.040Z,"26km N of Ishkashim, Tajikistan",earthquake,7.3,12.8,0.24,5,reviewed,us,us
+2018-10-04T06:58:56.310Z,32.8111667,-115.4566667,11.91,2.52,ml,38,36,0.01016,0.26,ci,ci37378674,2018-10-04T18:06:45.896Z,"7km W of Holtville, CA",earthquake,0.29,0.41,0.168,68,reviewed,ci,ci
+2018-10-04T06:17:30.290Z,22.12,120.4548,34.62,4.3,mb,,116,0.903,0.87,us,us1000h6ui,2018-10-04T06:56:35.040Z,"32km WNW of Hengchun, Taiwan",earthquake,8.5,7.6,0.116,21,reviewed,us,us
+2018-10-04T05:07:20.030Z,-18.054,-178.6064,541.98,4.2,mb,,74,3.195,0.88,us,us1000h6u7,2018-10-04T07:26:42.040Z,"280km SE of Lambasa, Fiji",earthquake,11.8,8.8,0.056,87,reviewed,us,us
+2018-10-04T04:16:21.000Z,-17.8648,-178.5383,579.32,5.5,mww,,36,3.249,1.05,us,us1000h6th,2018-10-04T19:32:38.040Z,"273km SE of Lambasa, Fiji",earthquake,10.3,6.5,0.069,20,reviewed,us,us
+2018-10-04T03:55:17.520Z,-36.1573,52.5161,10,4.8,mb,,86,12.12,0.65,us,us1000h6ta,2018-10-04T04:11:06.040Z,"Southwest Indian Ridge",earthquake,10.5,1.6,0.139,16,reviewed,us,us
+2018-10-04T03:46:57.000Z,18.9446,-64.0451,31,3.58,md,13,235,1.3195,0.37,pr,pr2018277000,2018-10-04T04:57:09.972Z,"83km NE of Road Town, British Virgin Islands",earthquake,3.65,27.14,0.19,12,reviewed,pr,pr
+2018-10-04T03:41:33.020Z,56.0662,163.8376,11.54,5.1,mb,,73,4.291,1,us,us1000h6t5,2018-10-04T04:05:02.040Z,"86km ESE of Ust'-Kamchatsk Staryy, Russia",earthquake,6.4,3.7,0.029,377,reviewed,us,us
+2018-10-04T03:11:57.986Z,69.5775,-144.1644,0.1,3.4,ml,,,,0.68,ak,ak20270640,2018-10-04T15:58:34.040Z,"66km SSW of Kaktovik, Alaska",earthquake,,0.9,,,automatic,ak,ak
+2018-10-04T03:00:13.720Z,68.8919,-147.7487,0.1,2.9,ml,,,,0.6,ak,ak20270632,2018-10-04T03:09:49.581Z,"124km NW of Arctic Village, Alaska",earthquake,,0.9,,,automatic,ak,ak
+2018-10-04T02:54:26.800Z,69.5414,-143.8755,2.5,2.8,ml,,,,0.75,ak,ak20270626,2018-10-04T03:00:09.695Z,"66km S of Kaktovik, Alaska",earthquake,,0.8,,,automatic,ak,ak
+2018-10-04T02:07:22.310Z,19.1056,-67.9441,72,2.85,md,4,213,1.38,0.44,pr,pr2018277004,2018-10-04T09:32:49.670Z,"75km NE of Punta Cana, Dominican Republic",earthquake,5.34,8.87,0.32,4,reviewed,pr,pr
+2018-10-04T01:48:57.713Z,69.5727,-144.1441,4.5,2.8,ml,,,,0.53,ak,ak20270446,2018-10-04T02:00:00.029Z,"65km SSW of Kaktovik, Alaska",earthquake,,1,,,automatic,ak,ak
+2018-10-04T01:42:48.786Z,68.924,-147.7609,0,3.2,ml,,,,0.82,ak,ak20270439,2018-10-04T01:55:35.249Z,"127km NW of Arctic Village, Alaska",earthquake,,1,,,automatic,ak,ak
+2018-10-04T01:11:40.093Z,68.8741,-147.7722,7.9,3.1,ml,,,,0.57,ak,ak20270427,2018-10-04T01:17:40.508Z,"123km NW of Arctic Village, Alaska",earthquake,,0.9,,,automatic,ak,ak
+2018-10-04T00:19:25.680Z,19.351,-68.4435,66,2.72,md,8,246,0.8394,0.61,pr,pr2018277003,2018-10-04T09:32:09.951Z,"75km ENE of Miches, Dominican Republic",earthquake,3.79,8.41,0.15,7,reviewed,pr,pr
+2018-10-04T00:08:21.392Z,55.8968,-149.2275,7.2,3.1,ml,,,,0.61,ak,ak20270410,2018-10-04T01:00:54.960Z,"286km SE of Kodiak, Alaska",earthquake,,3.9,,,reviewed,ak,ak
+2018-10-04T00:02:26.910Z,19.0896,-67.667,82,2.82,md,10,215,0.8342,0.54,pr,pr2018277001,2018-10-04T09:29:48.886Z,"89km NW of San Antonio, Puerto Rico",earthquake,4.66,7.43,0.3,10,reviewed,pr,pr
+2018-10-03T23:59:42.790Z,-56.1601,-27.1846,75.39,5.2,mb,,61,18.64,0.79,us,us1000h6q0,2018-10-04T00:58:47.040Z,"60km N of Visokoi Island, South Georgia and the South Sandwich Islands",earthquake,10.1,5.4,0.092,39,reviewed,us,us
+2018-10-03T23:53:02.460Z,30.7125,57.2939,10,4.3,mb,,82,5.557,0.77,us,us1000h6pj,2018-10-04T00:20:00.040Z,"51km NNE of Kerman, Iran",earthquake,6.3,1.9,0.101,28,reviewed,us,us
+2018-10-03T23:51:17.330Z,15.2728,-90.9576,10,4,mb,,91,0.527,1.11,us,us1000h6pi,2018-10-04T00:10:46.040Z,"7km NW of San Andres Sajcabaja, Guatemala",earthquake,3.3,1.5,0.119,19,reviewed,us,us
+2018-10-03T21:44:21.970Z,7.0935,125.8286,49,4.4,mb,,122,0.248,1.08,us,us1000h6lu,2018-10-03T22:39:42.040Z,"5km ESE of Aumbay, Philippines",earthquake,8,5.6,0.124,19,reviewed,us,us
+2018-10-03T17:52:48.620Z,56.7542,162.0301,10,4.9,mb,,121,4.217,1.02,us,us1000h6f3,2018-10-03T18:11:45.040Z,"64km NNW of Ust'-Kamchatsk Staryy, Russia",earthquake,6.8,1.8,0.041,186,reviewed,us,us
+2018-10-03T17:50:24.071Z,69.5488,-144.9206,13.5,3.5,ml,,,,0.49,ak,ak20270261,2018-10-03T18:35:22.043Z,"81km SW of Kaktovik, Alaska",earthquake,,0.2,,,reviewed,ak,ak
+2018-10-03T17:16:52.419Z,56.1866,-148.7056,10,3.2,ml,,,,0.77,ak,ak20270249,2018-10-03T18:29:23.515Z,"287km SE of Kodiak, Alaska",earthquake,,0,,,reviewed,ak,ak
+2018-10-03T17:13:54.765Z,56.2093,-148.646,12,3.5,ml,,,,0.66,ak,ak20270242,2018-10-03T18:25:09.270Z,"288km SE of Kodiak, Alaska",earthquake,,4.9,,,reviewed,ak,ak
+2018-10-03T15:53:26.160Z,-10.4057,120.1101,10,4.5,mb,,84,2.738,1.1,us,us1000h6b5,2018-10-03T21:43:26.040Z,"25km S of Lailunggi, Indonesia",earthquake,8,1.9,0.115,22,reviewed,us,us
+2018-10-03T15:15:32.880Z,35.7894,140.9742,33.59,4.8,mb,,118,2.08,1.32,us,us1000h6ac,2018-10-05T17:56:49.925Z,"14km ENE of Hasaki, Japan",earthquake,6.7,5.2,0.065,74,reviewed,us,us
+2018-10-03T12:38:05.120Z,-10.4392,120.1283,10,5.3,mb,,80,2.745,1.2,us,us1000h68e,2018-10-04T21:25:06.040Z,"29km SSW of Nggongi, Indonesia",earthquake,6.3,1.7,0.071,66,reviewed,us,us
+2018-10-03T12:03:18.540Z,56.261,-150.0118,10,3.6,ml,,184,2.045,0.53,us,us1000h681,2018-10-03T18:17:52.688Z,"223km SE of Kodiak, Alaska",earthquake,8,2,0.043,70,reviewed,us,us
+2018-10-03T11:53:58.690Z,-10.5748,120.3166,10,4.6,mb,,79,2.702,0.92,us,us1000h67z,2018-10-03T12:17:07.040Z,"43km SSE of Nggongi, Indonesia",earthquake,7,1.9,0.082,44,reviewed,us,us
+2018-10-03T11:45:59.360Z,18.8263,-66.2545,29,2.78,md,14,263,0.4445,0.19,pr,pr2018276006,2018-10-03T12:16:55.385Z,"40km N of Dorado, Puerto Rico",earthquake,0.86,3.11,0.23,7,reviewed,pr,pr
+2018-10-03T09:58:06.080Z,-10.5439,120.2732,10,5,mww,,79,2.71,1.04,us,us1000h66t,2018-10-03T10:17:43.040Z,"38km S of Nggongi Satu, Indonesia",earthquake,5.6,1.8,0.075,17,reviewed,us,us
+2018-10-03T09:38:08.758Z,63.2346,-151.4963,1.2,2.7,ml,,,,1.01,ak,ak20270182,2018-10-03T09:43:18.414Z,"123km NW of Talkeetna, Alaska",earthquake,,0.3,,,automatic,ak,ak
+2018-10-03T09:28:04.880Z,36.2148,-98.9511,5,2.9,mb_lg,,114,0.312,0.25,us,us1000h66f,2018-10-03T09:43:17.040Z,"19km N of Taloga, Oklahoma",earthquake,1,1.8,0.052,95,reviewed,us,us
+2018-10-03T09:22:55.685Z,68.7616,-147.4969,0,2.9,ml,,,,0.78,ak,ak20270175,2018-10-03T09:28:41.459Z,"107km NW of Arctic Village, Alaska",earthquake,,0.4,,,automatic,ak,ak
+2018-10-03T09:09:32.002Z,68.7576,-147.5115,0,2.6,ml,,,,0.77,ak,ak20270126,2018-10-03T09:14:44.203Z,"107km NW of Arctic Village, Alaska",earthquake,,0.4,,,automatic,ak,ak
+2018-10-03T07:36:41.480Z,37.3637,-97.9833,5,3.5,mb_lg,,90,0.067,0.3,us,us1000h656,2018-10-06T01:08:55.872Z,"9km NNE of Harper, Kansas",earthquake,1.4,1.6,0.042,146,reviewed,us,us
+2018-10-03T07:21:28.370Z,53.5244,158.9335,113,4.6,mb,,115,0.53,0.64,us,us1000h651,2018-10-03T07:58:47.040Z,"52km NE of Yelizovo, Russia",earthquake,10.8,6.6,0.044,157,reviewed,us,us
+2018-10-03T07:01:56.870Z,17.9913,-67.6238,34,2.65,md,16,287,0.4189,0.39,pr,pr2018276004,2018-10-03T11:28:08.984Z,"46km W of Pole Ojea, Puerto Rico",earthquake,1.76,3.31,0.31,14,reviewed,pr,pr
+2018-10-03T05:46:18.690Z,-28.1248,-176.1835,10,4.9,mb,,112,1.896,1.59,us,us1000h63l,2018-10-03T06:17:56.040Z,"210km NE of Raoul Island, New Zealand",earthquake,9.1,1.9,0.099,32,reviewed,us,us
+2018-10-03T05:23:24.570Z,-10.3875,160.6499,10,5.3,mb,,64,1.169,1.13,us,us1000h639,2018-10-04T19:05:46.040Z,"130km SE of Honiara, Solomon Islands",earthquake,7.9,1.9,0.08,52,reviewed,us,us
+2018-10-03T04:12:58.530Z,53.1858,-168.6393,82.7,4.6,mb,,98,1.83,0.86,us,us1000h62f,2018-10-03T04:52:34.518Z,"31km NNE of Nikolski, Alaska",earthquake,3.2,11.8,0.042,166,reviewed,us,us
+2018-10-03T03:29:37.626Z,64.892,-148.9228,19.4,3.9,ml,,,,0.66,ak,ak20269968,2018-10-05T06:29:54.045Z,"44km N of North Nenana, Alaska",earthquake,,0.1,,,reviewed,ak,ak
+2018-10-03T02:54:50.640Z,-21.5319,-65.5635,282.04,4.6,mb,,35,2.805,1.23,us,us1000h61k,2018-10-03T03:19:03.040Z,"18km ESE of Tupiza, Bolivia",earthquake,6.5,6.5,0.036,227,reviewed,us,us
+2018-10-03T02:24:08.210Z,19.6035,-67.9508,84,3.1,md,5,259,1.1715,0.08,pr,pr2018276001,2018-10-03T04:45:54.465Z,"122km NNE of Punta Cana, Dominican Republic",earthquake,2.97,6.25,0.29,4,reviewed,pr,pr
+2018-10-03T00:23:04.220Z,-24.2956,-67.0851,205.46,4.2,mb,,57,1.671,0.97,us,us1000h60l,2018-10-03T00:56:29.040Z,"78km W of San Antonio de los Cobres, Argentina",earthquake,11.4,14.2,0.216,6,reviewed,us,us
+2018-10-02T21:38:40.640Z,-10.8642,109.5086,10,4.5,mb,,169,3.099,0.67,us,us1000h5xr,2018-10-02T22:04:38.040Z,"South of Java, Indonesia",earthquake,8.7,2,0.135,16,reviewed,us,us
+2018-10-02T21:37:35.155Z,40.5864,-119.7358,0.9,2.8,ml,18,192.16,0.493,0.2092,nn,nn00659351,2018-10-03T02:06:08.748Z,"30km W of Gerlach-Empire, Nevada",earthquake,,2.5,0.25,10,reviewed,nn,nn
+2018-10-02T21:06:56.430Z,-1.0381,119.967,13.89,4.8,mb,,69,2.285,0.86,us,us1000h5x5,2018-10-02T21:23:54.040Z,"19km SSE of Palu, Indonesia",earthquake,5.8,5.2,0.088,40,reviewed,us,us
+2018-10-02T20:24:45.137Z,69.2643,-146.6269,0,2.5,ml,,,,0.95,ak,ak20269491,2018-10-03T14:24:21.040Z,"128km SSE of Prudhoe Bay, Alaska",earthquake,,0.3,,,automatic,ak,ak
+2018-10-02T20:20:31.298Z,61.8569,-157.7149,17.8,3.5,ml,,,,0.57,ak,ak20269484,2018-10-03T14:21:07.040Z,"114km ESE of Holy Cross, Alaska",earthquake,,0.1,,,reviewed,ak,ak
+2018-10-02T19:50:48.080Z,55.546,-135.1012,22.2,2.7,ml,,,,0.97,ak,ak20269482,2018-10-03T14:18:51.040Z,"123km W of Craig, Alaska",earthquake,,3.3,,,reviewed,ak,ak
+2018-10-02T19:22:39.210Z,-18.0758,-178.4529,543.03,4.8,mb,,114,3.343,0.93,us,us1000h5ud,2018-10-03T14:00:17.040Z,"286km N of Ndoi Island, Fiji",earthquake,12.9,8.2,0.085,47,reviewed,us,us
+2018-10-02T19:13:04.888Z,40.5602,-119.7346,4,2.6,ml,19,84.75,0.488,0.2293,nn,nn00659308,2018-10-03T02:05:41.238Z,"30km W of Gerlach-Empire, Nevada",earthquake,,6.7,0.29,11,reviewed,nn,nn
+2018-10-02T18:51:52.585Z,40.5931,-119.7187,1.8,2.6,ml,12,200.63,0.508,0.1332,nn,nn00659292,2018-10-03T13:58:12.040Z,"28km W of Gerlach-Empire, Nevada",earthquake,,4.7,0.29,7,reviewed,nn,nn
+2018-10-02T18:33:17.018Z,65.5021,-161.8959,0.1,3.2,ml,,,,1.01,ak,ak20269475,2018-10-03T13:54:41.040Z,"158km SSE of Kotzebue, Alaska",earthquake,,0.3,,,automatic,ak,ak
+2018-10-02T17:45:04.210Z,16.0863,-95.1047,38.87,4.4,mb,,153,2.858,1.36,us,us1000h5sq,2018-10-03T13:51:52.040Z,"13km SE of Salina Cruz, Mexico",earthquake,7.8,10,0.052,108,reviewed,us,us
+2018-10-02T16:52:25.260Z,32.3743333,-115.4675,19.99,2.83,ml,35,148,0.1447,0.26,ci,ci37377162,2018-10-02T19:18:57.521Z,"24km SSW of Puebla, B.C., MX",earthquake,0.57,1.12,0.185,21,reviewed,ci,ci
+2018-10-02T16:51:53.180Z,32.3868333,-115.4616667,9.7,2.65,ml,23,145,0.1365,0.28,ci,ci37377154,2018-10-02T19:28:06.540Z,"22km SSW of Puebla, B.C., MX",earthquake,0.55,1.54,0.179,24,reviewed,ci,ci
+2018-10-02T16:01:57.900Z,-24.7991,-175.2457,10,4.9,mb,,140,5.033,0.48,us,us1000h5np,2018-10-02T16:41:06.040Z,"South of Tonga",earthquake,7.2,1.6,0.12,22,reviewed,us,us
+2018-10-02T16:01:19.460Z,18.6645,-64.3055,91,3.35,md,7,214,1.3755,0.37,pr,pr2018275011,2018-10-02T20:46:05.592Z,"42km NE of Road Town, British Virgin Islands",earthquake,10.51,7.79,0.32,5,reviewed,pr,pr
+2018-10-02T15:29:05.190Z,37.6544,37.4004,5,4.6,mb,,47,0.504,1.16,us,us1000h5mr,2018-10-02T16:14:31.040Z,"14km SE of Caglayancerit, Turkey",earthquake,4.4,1.4,0.095,33,reviewed,us,us
+2018-10-02T13:27:25.112Z,69.5693,-144.165,0,2.5,ml,,,,0.85,ak,ak20268946,2018-10-02T13:32:35.455Z,"66km SSW of Kaktovik, Alaska",earthquake,,1.2,,,automatic,ak,ak
+2018-10-02T12:49:33.300Z,59.7785,-153.221,101.4,2.5,ml,,,,0.62,ak,ak20268936,2018-10-02T12:54:29.174Z,"78km W of Anchor Point, Alaska",earthquake,,0.5,,,automatic,ak,ak
+2018-10-02T12:11:42.520Z,-20.3151,-69.3316,83.48,4.3,mwr,,52,0.523,1.43,us,us1000h5ld,2018-10-02T21:46:01.619Z,"85km E of Iquique, Chile",earthquake,3.2,6.3,,,reviewed,us,guc
+2018-10-02T11:35:41.210Z,-17.7914,167.8412,10,4.9,mb,,71,4.338,0.87,us,us1000h5l2,2018-10-03T02:09:15.273Z,"51km W of Port-Vila, Vanuatu",earthquake,3.3,1.9,0.069,66,reviewed,us,us
+2018-10-02T10:40:13.410Z,-6.5872,-80.7271,10,4.7,mb,,145,6.229,0.7,us,us1000h5kk,2018-10-02T11:03:57.040Z,"79km W of Morrope, Peru",earthquake,7.4,1.9,0.065,72,reviewed,us,us
+2018-10-02T10:29:16.550Z,36.2233,-98.8789,5,3,mb_lg,,70,0.277,0.52,us,us1000h5kf,2018-10-02T10:43:22.040Z,"21km NNE of Taloga, Oklahoma",earthquake,1.7,2,0.052,96,reviewed,us,us
+2018-10-02T10:14:06.330Z,19.3881,-65.1931,85,3.6,md,12,330,1.408,0.29,pr,pr2018275005,2018-10-02T13:40:43.040Z,"120km NNW of Charlotte Amalie, U.S. Virgin Islands",earthquake,3.46,7.42,0.38,9,reviewed,pr,pr
+2018-10-02T10:08:37.460Z,-17.825,167.8506,10,5.6,mww,,48,4.324,0.76,us,us1000h5k9,2018-10-03T20:57:58.040Z,"50km WSW of Port-Vila, Vanuatu",earthquake,8.2,1.9,0.073,18,reviewed,us,us
+2018-10-02T08:41:33.740Z,40.4086667,-124.439,23,2.61,md,17,244,0.1023,0.08,nc,nc73092486,2018-10-02T22:57:04.942Z,"16km NW of Petrolia, CA",earthquake,1.31,0.42,0.155,34,reviewed,nc,nc
+2018-10-02T07:54:36.760Z,-10.5538,120.2506,35,4.5,mb,,80,2.733,0.9,us,us1000h5j0,2018-10-02T12:56:27.040Z,"39km S of Nggongi Satu, Indonesia",earthquake,6.8,1.9,0.107,26,reviewed,us,us
+2018-10-02T07:31:05.856Z,69.6079,-144.1342,0.2,3.1,ml,,,,0.67,ak,ak20268840,2018-10-02T07:35:59.349Z,"61km SSW of Kaktovik, Alaska",earthquake,,0.8,,,automatic,ak,ak
+2018-10-02T07:01:09.580Z,-10.4828,120.3092,35,4.8,mb,,79,2.643,0.95,us,us1000h5ih,2018-10-02T07:52:49.040Z,"32km SSE of Nggongi, Indonesia",earthquake,6.8,2,0.084,44,reviewed,us,us
+2018-10-02T06:26:24.840Z,4.9031,125.4253,183.44,4.7,mb,,123,2.157,0.7,us,us1000h5ib,2018-10-02T09:41:01.040Z,"55km S of Sarangani, Philippines",earthquake,9.3,7.4,0.102,29,reviewed,us,us
+2018-10-02T06:09:18.360Z,-10.5031,120.29,15.89,4.5,mb,,79,2.67,1.27,us,us1000h5i1,2018-10-02T09:46:51.040Z,"34km S of Nggongi Satu, Indonesia",earthquake,5.3,5.5,0.119,21,reviewed,us,us
+2018-10-02T05:15:33.750Z,0.2915,126.2532,47.04,5.1,mb,,51,1.211,0.78,us,us1000h5hp,2018-10-02T05:30:53.040Z,"135km WSW of Kota Ternate, Indonesia",earthquake,6.8,7.5,0.087,43,reviewed,us,us
+2018-10-02T05:06:20.370Z,35.9552,-97.2444,3.93,2.9,mb_lg,,60,0.097,0.12,us,us1000h5he,2018-10-02T05:45:19.040Z,"1km NE of Langston, Oklahoma",earthquake,1.2,1.2,0.096,30,reviewed,us,us
+2018-10-02T04:59:26.290Z,-1.5951,120.2339,10,5,mb,,90,2.596,0.71,us,us1000h5hb,2018-10-02T05:17:07.040Z,"50km WSW of Kasiguncu, Indonesia",earthquake,6.4,1.9,0.109,27,reviewed,us,us
+2018-10-02T04:49:31.470Z,-10.4747,120.1211,20.71,5.6,mww,,37,2.774,1.22,us,us1000h5h5,2018-10-03T21:02:50.040Z,"33km SSW of Nggongi Satu, Indonesia",earthquake,6.9,5,0.073,18,reviewed,us,us
+2018-10-02T04:11:47.600Z,-10.4935,120.2867,28.44,4.2,mb,,83,2.666,1.43,us,us1000h5gv,2018-10-02T04:41:22.040Z,"33km S of Nggongi, Indonesia",earthquake,8.2,8.4,0.141,14,reviewed,us,us
+2018-10-02T03:27:51.260Z,36.4583,141.2201,31.46,4.9,mb,,117,1.449,1.1,us,us1000h5gh,2018-10-03T15:49:06.455Z,"53km ESE of Hitachi, Japan",earthquake,6.8,5.4,0.063,78,reviewed,us,us
+2018-10-02T03:20:37.130Z,18.9945,-68.24,94,2.82,md,7,214,0.501,0.56,pr,pr2018275004,2018-10-02T07:23:10.798Z,"48km NNE of Punta Cana, Dominican Republic",earthquake,8.77,7.11,0.39,4,reviewed,pr,pr
+2018-10-02T02:45:40.923Z,69.5663,-144.152,2.9,3.2,ml,,,,0.71,ak,ak20268779,2018-10-02T02:58:12.040Z,"66km SSW of Kaktovik, Alaska",earthquake,,0.9,,,automatic,ak,ak
+2018-10-02T02:45:07.160Z,18.8406,-65.1721,29,2.51,md,6,336,0.9725,0.2,pr,pr2018275003,2018-10-02T06:21:05.332Z,"60km NNW of Charlotte Amalie, U.S. Virgin Islands",earthquake,2.26,14.45,0.33,4,reviewed,pr,pr
+2018-10-02T02:42:49.180Z,31.8586,50.527,10,4.9,mb,,59,5.165,0.87,us,us1000h5g4,2018-10-02T03:04:29.040Z,"44km S of Farsan, Iran",earthquake,7.5,1.8,0.061,85,reviewed,us,us
+2018-10-02T02:36:32.670Z,18.8623,-65.1513,26,2.98,md,8,331,1.0026,0.32,pr,pr2018275002,2018-10-02T06:20:51.812Z,"62km NNW of Charlotte Amalie, U.S. Virgin Islands",earthquake,2.68,22.5,0.14,3,reviewed,pr,pr
+2018-10-02T00:16:45.760Z,-10.4623,120.1589,26,5.9,mww,,49,2.738,1.25,us,us1000h5el,2018-10-02T05:21:27.574Z,"30km SSW of Nggongi, Indonesia",earthquake,6.5,1.8,0.073,18,reviewed,us,us
+2018-10-01T23:59:43.070Z,-10.4964,120.2207,29,6,mww,,46,2.715,1.19,us,us1000h5eg,2018-10-02T05:17:03.108Z,"33km S of Nggongi Satu, Indonesia",earthquake,6.6,1.9,0.043,51,reviewed,us,us
+2018-10-01T23:46:39.550Z,-0.6579,119.8785,10,5.2,mww,,50,1.975,0.94,us,us1000h5eb,2018-10-02T16:51:37.040Z,"25km N of Palu, Indonesia",earthquake,5.7,1.9,0.071,19,reviewed,us,us
+2018-10-01T23:43:37.926Z,69.2196,-146.6434,0.1,3,ml,,,,0.76,ak,ak20268689,2018-10-01T23:52:45.040Z,"130km NNW of Arctic Village, Alaska",earthquake,,0.5,,,automatic,ak,ak
+2018-10-01T23:27:06.090Z,-10.4753,120.2032,22.25,5.4,mb,,59,2.714,0.93,us,us1000h5e3,2018-10-04T23:24:28.040Z,"31km S of Nggongi Satu, Indonesia",earthquake,6.8,5.1,0.051,134,reviewed,us,us
+2018-10-01T23:12:02.580Z,-10.4914,120.1536,10,5,mww,,46,2.761,1.48,us,us1000h5du,2018-10-01T23:38:40.040Z,"33km SSW of Nggongi Satu, Indonesia",earthquake,5.8,1.7,0.073,18,reviewed,us,us
+2018-10-01T22:05:48.760Z,19.8275,-155.3796667,18.83,3.08,ml,32,85,0.0703,0.17,hv,hv70625142,2018-10-02T21:27:00.749Z,"28km W of Pepeekeo, Hawaii",earthquake,0.47,0.98,0.222,48,reviewed,hv,hv
+2018-10-01T21:43:03.240Z,16.7622,-93.9565,122.21,5.4,mww,,113,1.809,1.11,us,us1000h5c4,2018-10-02T02:08:05.040Z,"25km W of Cintalapa de Figueroa, Mexico",earthquake,4.8,6.1,0.068,21,reviewed,us,us
+2018-10-01T21:20:50.700Z,36.5279,-98.9557,10.71,2.5,mb_lg,,126,0.108,0.34,us,us1000h5be,2018-10-01T21:41:12.040Z,"24km ENE of Mooreland, Oklahoma",earthquake,1.5,5.3,0.092,31,reviewed,us,us
+2018-10-01T21:10:18.009Z,69.588,-144.1453,0,3.2,ml,,,,0.86,ak,ak20268630,2018-10-01T21:16:18.146Z,"63km SSW of Kaktovik, Alaska",earthquake,,1.1,,,automatic,ak,ak
+2018-10-01T20:50:38.000Z,36.2244,-98.9376,6.106,2.7,ml,,104,,0.4,us,us1000h5am,2018-10-05T17:10:08.040Z,"20km N of Taloga, Oklahoma",earthquake,1,5.2,,,reviewed,tul,tul
+2018-10-01T20:33:40.189Z,58.9806,-153.0321,6.1,2.9,ml,,,,0.94,ak,ak20268609,2018-10-01T20:46:12.639Z,"111km SW of Anchor Point, Alaska",earthquake,,0.3,,,automatic,ak,ak
+2018-10-01T19:45:31.249Z,61.3185,-147.3935,16.4,3.7,ml,,,,0.56,ak,ak20268557,2018-10-02T10:00:54.475Z,"59km WNW of Valdez, Alaska",earthquake,,0.1,,,reviewed,ak,ak
+2018-10-01T18:32:41.122Z,69.2064,-146.3558,5.7,3.3,ml,,,,0.63,ak,ak20268528,2018-10-02T02:35:21.232Z,"124km NNW of Arctic Village, Alaska",earthquake,,0.3,,,reviewed,ak,ak
+2018-10-01T18:16:42.060Z,-26.5898,67.5373,10,5.3,mww,,34,14.024,0.85,us,us1000h55w,2018-10-04T23:51:23.589Z,"Indian Ocean Triple Junction",earthquake,10.5,1.8,0.062,25,reviewed,us,us
+2018-10-01T18:12:59.970Z,-26.6217,67.5664,10,5.2,mb,,50,37.405,0.64,us,us1000h55v,2018-10-01T18:31:38.040Z,"Indian Ocean Triple Junction",earthquake,12,1.9,0.074,60,reviewed,us,us
+2018-10-01T18:03:54.570Z,-24.0784,-66.8203,199.13,4.7,mwr,,77,1.677,0.86,us,us1000h55a,2018-10-01T18:23:40.040Z,"53km WNW of San Antonio de los Cobres, Argentina",earthquake,8.3,7.9,,,reviewed,us,guc
+2018-10-01T17:58:30.560Z,-12.8287,45.2039,10,4.5,mb,,75,6.454,0.96,us,us1000h5aj,2018-10-04T23:40:11.139Z,"2km NE of Dembeni, Mayotte",earthquake,7.9,1.9,0.116,22,reviewed,us,us
+2018-10-01T17:56:19.620Z,34.0013333,-117.0173333,15.87,3.48,ml,143,25,0.06715,0.18,ci,ci37376114,2018-10-02T17:58:08.649Z,"4km ENE of Calimesa, CA",earthquake,0.11,0.25,0.137,313,reviewed,ci,ci
+2018-10-01T16:59:38.574Z,53.7199,-138.8894,12,3.1,ml,,,,0.76,ak,ak20268362,2018-10-01T18:08:42.102Z,"West of the Queen Charlotte Islands",earthquake,,12.7,,,reviewed,ak,ak
+2018-10-01T16:52:21.018Z,60.1324,-152.8614,118.3,2.5,ml,,,,0.55,ak,ak20268356,2018-10-01T16:57:25.625Z,"39km S of Redoubt Volcano, Alaska",earthquake,,0.5,,,automatic,ak,ak
+2018-10-01T15:11:49.850Z,-45.7624,-75.842,10,5.2,mww,,155,1.977,0.83,us,us1000h50j,2018-10-01T17:18:01.040Z,"238km W of Puerto Chacabuco, Chile",earthquake,7.8,1.7,0.073,18,reviewed,us,us
+2018-10-01T15:05:32.390Z,-45.9068,-76.5889,10,4.4,mb,,211,2.427,0.71,us,us1000h50b,2018-10-01T17:05:35.040Z,"297km W of Puerto Chacabuco, Chile",earthquake,4.7,2,0.311,3,reviewed,us,us
+2018-10-01T14:47:35.300Z,53.2501,-164.8444,33.08,3.2,ml,,234,0.999,0.41,us,us1000h51r,2018-10-01T16:57:29.040Z,"116km SSE of Akutan, Alaska",earthquake,4.6,11.2,0.137,7,reviewed,us,us
+2018-10-01T14:11:46.910Z,-9.165,124.0809,94.15,4.6,mb,,73,0.614,1.13,us,us1000h4zj,2018-10-01T17:58:56.307Z,"53km NW of Kefamenanu, Indonesia",earthquake,7.8,7.5,0.119,21,reviewed,us,us
+2018-10-01T13:24:44.880Z,12.9029,92.238,26.33,5.1,mb,,77,1.334,0.88,us,us1000h4z5,2018-10-01T14:15:11.040Z,"142km NNW of Bamboo Flat, India",earthquake,6.7,3.9,0.055,106,reviewed,us,us
+2018-10-01T13:20:56.200Z,-24.0827,-176.1701,10,5,mb,,76,5.376,0.79,us,us1000h4z7,2018-10-01T14:09:49.040Z,"South of the Fiji Islands",earthquake,3.8,1.9,0.103,36,reviewed,us,us
+2018-10-01T12:25:03.920Z,41.1393333,-123.2905,39.11,2.52,md,34,68,0.1856,0.25,nc,nc73092171,2018-10-02T05:58:03.013Z,"31km SSE of Somes Bar, CA",earthquake,0.36,0.56,0.161,29,reviewed,nc,nc
+2018-10-01T11:55:58.830Z,18.0228,-68.034,66,3.05,md,16,219,0.6015,0.42,pr,pr2018274009,2018-10-01T12:26:48.966Z,"72km ESE of Boca de Yuma, Dominican Republic",earthquake,2.82,2.66,0.42,14,reviewed,pr,pr
+2018-10-01T11:38:54.567Z,59.6336,-153.8945,121.9,2.6,ml,,,,0.86,ak,ak20268228,2018-10-01T11:56:39.485Z,"59km ESE of Old Iliamna, Alaska",earthquake,,0.4,,,automatic,ak,ak
+2018-10-01T10:32:59.960Z,3.3661,126.9491,35.8,4.9,mb,,135,2.61,0.83,us,us1000h4y0,2018-10-01T12:07:59.040Z,"216km NNW of Tobelo, Indonesia",earthquake,9.7,7.1,0.069,85,reviewed,us,us
+2018-10-01T09:50:19.660Z,-26.0776,-177.0519,107.7,4.8,mb,,119,3.249,0.57,us,us1000h4xv,2018-10-01T11:04:20.040Z,"South of the Fiji Islands",earthquake,6,7.2,0.135,23,reviewed,us,us
+2018-10-01T08:35:07.687Z,57.1381,-156.5438,81.4,2.5,ml,,,,0.49,ak,ak20268169,2018-10-01T16:08:10.952Z,"156km NNW of Chirikof Island, Alaska",earthquake,,0.5,,,reviewed,ak,ak
+2018-10-01T08:04:38.870Z,17.5611,-67.7255,53,3.03,md,8,329,0.76,0.38,pr,pr2018274008,2018-10-01T12:00:09.713Z,"73km SW of Pole Ojea, Puerto Rico",earthquake,4.45,7.96,0.08,4,reviewed,pr,pr
+2018-10-01T07:56:33.000Z,18.8498,-65.192,17,2.94,md,13,330,0.9655,0.21,pr,pr2018274007,2018-10-01T12:46:14.040Z,"59km NNW of Charlotte Amalie, U.S. Virgin Islands",earthquake,8.13,16.36,0.4,12,reviewed,pr,pr
+2018-10-01T07:21:40.090Z,-26.6777,67.6257,10,5.3,mb,,57,7.922,0.61,us,us1000h4wp,2018-10-01T07:41:00.040Z,"Indian Ocean Triple Junction",earthquake,9.7,1.9,0.064,81,reviewed,us,us
+2018-10-01T06:02:49.300Z,-26.5731,67.597,10,5.1,mb,,90,37.443,0.7,us,us1000h4wg,2018-10-01T06:51:45.040Z,"Indian Ocean Triple Junction",earthquake,13.8,1.9,0.08,50,reviewed,us,us
+2018-10-01T05:43:35.190Z,-0.0102,119.6192,10,5.1,mww,,64,1.61,1.26,us,us1000h4vq,2018-10-02T17:07:48.040Z,"101km NNW of Palu, Indonesia",earthquake,6.4,1.8,0.08,15,reviewed,us,us
+2018-10-01T05:40:53.997Z,62.6057,-151.0333,79.8,2.6,ml,,,,0.43,ak,ak20268103,2018-10-01T06:23:45.380Z,"57km NW of Talkeetna, Alaska",earthquake,,0.5,,,automatic,ak,ak
+2018-10-01T04:27:59.660Z,-36.157,52.4665,10,5.2,mww,,36,10.273,0.83,us,us1000h4ve,2018-10-01T04:47:22.040Z,"Southwest Indian Ridge",earthquake,9.6,1.9,0.075,17,reviewed,us,us
+2018-10-01T03:52:45.671Z,69.4178,-144.4037,35.2,2.9,ml,,,,0.85,ak,ak20268069,2018-10-01T03:56:51.062Z,"85km SSW of Kaktovik, Alaska",earthquake,,22.3,,,automatic,ak,ak
+2018-10-01T03:06:42.920Z,18.9018,-65.1415,25,3.21,md,13,331,1.038,0.28,pr,pr2018274004,2018-10-01T06:16:10.320Z,"65km NNW of Charlotte Amalie, U.S. Virgin Islands",earthquake,2.1,21.06,0.32,12,reviewed,pr,pr
+2018-10-01T02:22:05.190Z,42.8596,141.9594,47.28,4.8,mb,,77,1.224,0.81,us,us1000h4uw,2018-10-01T23:12:58.978Z,"25km E of Chitose, Japan",earthquake,6.9,7,0.03,337,reviewed,us,us
+2018-10-01T01:43:17.534Z,69.024,-147.1498,0,2.7,ml,,,,0.69,ak,ak20268035,2018-10-01T01:53:58.759Z,"119km NNW of Arctic Village, Alaska",earthquake,,0.4,,,automatic,ak,ak
+2018-10-01T01:34:09.550Z,18.776,-65.1365,27,2.66,md,11,333,0.9535,0.28,pr,pr2018274002,2018-10-01T04:36:40.697Z,"52km NNW of Charlotte Amalie, U.S. Virgin Islands",earthquake,2.41,17.72,0.42,10,reviewed,pr,pr
+2018-10-01T00:58:25.718Z,69.2265,-146.4145,15.3,4.1,ml,,,,0.44,ak,ak20268005,2018-10-02T01:51:47.040Z,"131km NNW of Arctic Village, Alaska",earthquake,,0.3,,,reviewed,ak,ak
+2018-10-01T00:33:23.010Z,37.1861,-97.4422,5.79,3,mb_lg,,87,0.149,0.4,us,us1000h4tp,2018-10-02T04:55:13.278Z,"10km SW of Wellington, Kansas",earthquake,1.5,6.6,0.055,87,reviewed,us,us
+2018-10-01T00:31:15.910Z,42.0223333,-124.2715,16.22,2.99,ml,12,173,0.05672,0.27,uw,uw61424827,2018-10-02T03:31:16.224Z,"3km SSE of Brookings, Oregon",earthquake,1.11,0.96,0.204,10,reviewed,uw,uw
+2018-10-01T00:14:16.710Z,18.8541,-65.1108,27,2.74,md,10,332,1.0255,0.29,pr,pr2018274000,2018-10-01T04:36:08.377Z,"59km NNW of Charlotte Amalie, U.S. Virgin Islands",earthquake,2.23,19.94,0.38,6,reviewed,pr,pr
+2018-10-01T00:09:56.170Z,18.8035,-65.131,28,2.93,md,8,333,0.9761,0.36,pr,pr2018274001,2018-10-01T04:36:22.977Z,"55km NNW of Charlotte Amalie, U.S. Virgin Islands",earthquake,2.72,21.74,0.36,6,reviewed,pr,pr
+2018-09-30T23:54:54.100Z,64.2416,-171.2043,10,3.2,mb_lg,,268,2.552,0.58,us,us1000h4te,2018-10-01T00:13:39.040Z,"57km NNE of Gambell, Alaska",earthquake,12,2,0.193,7,reviewed,us,us
+2018-09-30T23:49:25.450Z,34.5426,46.1428,10,4.4,mb,,70,1.218,0.9,us,us1000h4tc,2018-10-01T00:04:38.040Z,"27km ENE of Sarpol-e Zahab, Iran",earthquake,7.4,1.9,0.067,64,reviewed,us,us
+2018-09-30T23:46:33.790Z,18.8728,-65.0708,28,3,md,10,333,1.0674,0.3,pr,pr2018273024,2018-10-01T07:13:41.195Z,"60km NNW of Charlotte Amalie, U.S. Virgin Islands",earthquake,2.25,20.85,0.34,10,reviewed,pr,pr
+2018-09-30T23:29:42.180Z,18.8556,-65.1813,12,3.56,md,26,193,0.9771,0.4,pr,pr2018273020,2018-10-01T00:30:46.290Z,"70km N of Culebra, Puerto Rico",earthquake,1.39,2.43,0.44,24,reviewed,pr,pr
+2018-09-30T23:26:29.110Z,36.7094,71.0438,215.95,4.3,mb,,69,0.559,1.04,us,us1000h4t2,2018-09-30T23:41:36.040Z,"25km SE of Jarm, Afghanistan",earthquake,7.6,6.7,0.202,7,reviewed,us,us
+2018-09-30T21:58:02.130Z,-5.7825,146.7914,85.57,5,mb,,37,3.617,0.99,us,us1000h4sf,2018-09-30T23:09:47.648Z,"106km NNW of Lae, Papua New Guinea",earthquake,8.5,7.6,0.053,112,reviewed,us,us
+2018-09-30T21:40:16.800Z,19.1373,-66.343,60,3.17,md,3,339,0.8911,0.01,pr,pr2018273023,2018-10-01T01:02:20.748Z,"74km N of Brenas, Puerto Rico",earthquake,2.43,3.93,0.02,3,reviewed,pr,pr
+2018-09-30T21:03:55.280Z,35.9647,-97.254,10.27,2.6,mb_lg,,33,0.108,0.26,us,us1000h4rw,2018-10-01T13:53:47.411Z,"2km N of Langston, Oklahoma",earthquake,0.8,4.4,0.083,38,reviewed,us,us
+2018-09-30T20:51:08.110Z,18.8701,-65.206,24,3.12,md,13,330,0.9712,0.28,pr,pr2018273022,2018-10-01T01:02:10.405Z,"63km N of Culebra, Puerto Rico",earthquake,1.8,20.95,0.33,12,reviewed,pr,pr
+2018-09-30T20:46:45.140Z,19.5121667,-155.6591667,5.27,3.41,ml,56,27,0.0322,0.13,hv,hv70622967,2018-10-01T00:57:30.698Z,"21km ENE of Honaunau-Napoopoo, Hawaii",earthquake,0.24,0.35,0.15,53,reviewed,hv,hv
+2018-09-30T20:45:33.340Z,19.5075,-155.6571667,4.24,2.6,ml,44,63,0.03572,0.13,hv,hv70622962,2018-10-01T23:05:24.320Z,"22km ENE of Honaunau-Napoopoo, Hawaii",earthquake,0.25,0.43,0.161,35,reviewed,hv,hv
+2018-09-30T20:33:34.770Z,18.8058,-65.2606,30,2.97,md,3,340,0.8869,0.38,pr,pr2018273021,2018-10-01T00:44:42.646Z,"55km N of Culebra, Puerto Rico",earthquake,5.85,28.86,0.07,2,reviewed,pr,pr
+2018-09-30T20:16:46.720Z,18.8415,-65.152,35,2.77,md,4,338,0.9873,0.25,pr,pr2018273019,2018-10-01T00:44:21.214Z,"60km NNW of Charlotte Amalie, U.S. Virgin Islands",earthquake,3.47,16.58,0.42,2,reviewed,pr,pr
+2018-09-30T20:06:58.090Z,18.8648,-65.1346,30,2.6,md,7,332,1.0161,0.37,pr,pr2018273017,2018-10-01T00:43:59.510Z,"61km NNW of Charlotte Amalie, U.S. Virgin Islands",earthquake,3.36,24.38,0.34,6,reviewed,pr,pr
+2018-09-30T19:44:50.570Z,18.8788,-65.1341,25,3.06,md,12,331,1.0265,0.38,pr,pr2018273016,2018-10-01T00:43:49.822Z,"63km NNW of Charlotte Amalie, U.S. Virgin Islands",earthquake,2.57,28.66,0.26,7,reviewed,pr,pr
+2018-09-30T19:40:12.660Z,42.7717,142.5397,123.32,4.3,mb,,109,0.883,0.81,us,us1000h4r4,2018-10-01T04:10:48.207Z,"50km NNE of Shizunai, Japan",earthquake,9.4,9.7,0.106,25,reviewed,us,us
+2018-09-30T19:37:00.280Z,18.9135,-65.1555,30,2.9,md,3,342,1.0372,0.18,pr,pr2018273014,2018-10-01T00:43:30.142Z,"67km NNW of Charlotte Amalie, U.S. Virgin Islands",earthquake,3.2,16.19,0.12,2,reviewed,pr,pr
+2018-09-30T19:29:35.000Z,19.0303,-65.208,30,2.61,md,4,329,1.0953,0.47,pr,pr2018273015,2018-10-01T00:43:40.430Z,"81km NNW of Charlotte Amalie, U.S. Virgin Islands",earthquake,4.33,36.51,0.38,4,reviewed,pr,pr
+2018-09-30T19:28:05.130Z,18.8761,-65.1678,24,3.16,md,12,331,1.0013,0.21,pr,pr2018273013,2018-10-01T00:43:12.358Z,"64km NNW of Charlotte Amalie, U.S. Virgin Islands",earthquake,1.51,16.65,0.19,11,reviewed,pr,pr
+2018-09-30T19:01:39.730Z,18.9241,-65.348,36,2.98,md,4,333,0.9286,0.28,pr,pr2018273012,2018-10-01T00:42:56.854Z,"68km N of Culebra, Puerto Rico",earthquake,3.73,17.45,0.04,3,reviewed,pr,pr
+2018-09-30T18:45:57.460Z,51.5716,174.1602,31.98,4.6,mb,,194,3.219,0.84,us,us1000h4qp,2018-09-30T20:06:08.860Z,"128km S of Shemya Island, Alaska",earthquake,14,9,0.079,48,reviewed,us,us
+2018-09-30T18:43:57.550Z,18.9161,-65.134,27,3.27,md,15,216,1.0535,0.34,pr,pr2018273008,2018-09-30T20:06:29.040Z,"65km N of Culebra, Puerto Rico",earthquake,2.029,22.26,0.36,2,reviewed,pr,pr
+2018-09-30T18:31:42.290Z,18.7068,-65.1151,62,2.59,md,7,334,0.9259,0.17,pr,pr2018273011,2018-09-30T21:30:49.823Z,"44km NNW of Charlotte Amalie, U.S. Virgin Islands",earthquake,3.51,5,0.26,4,reviewed,pr,pr
+2018-09-30T18:21:50.490Z,18.899,-65.1651,26,3.8,md,22,214,1.02,0.41,pr,pr2018273007,2018-09-30T19:05:54.040Z,"56km N of Culebra, Puerto Rico",earthquake,1.93,25.08,0.55,17,reviewed,pr,pr
+2018-09-30T18:13:08.480Z,18.8981,-65.164,26,3.18,md,13,330,1.0201,0.34,pr,pr2018273010,2018-09-30T21:30:31.295Z,"66km NNW of Charlotte Amalie, U.S. Virgin Islands",earthquake,2.24,23,0.38,12,reviewed,pr,pr
+2018-09-30T17:13:18.170Z,13.0845,-90.3727,10,4.5,mb,,219,1.261,0.88,us,us1000h4pt,2018-09-30T19:52:02.040Z,"81km SW of Acajutla, El Salvador",earthquake,7,2,0.124,19,reviewed,us,us
+2018-09-30T15:01:27.080Z,-1.2767,120.1725,10,4.6,mb,,86,2.448,0.87,us,us1000h4pb,2018-09-30T16:38:13.040Z,"54km SE of Palu, Indonesia",earthquake,6.4,1.9,0.111,24,reviewed,us,us
+2018-09-30T15:01:00.528Z,69.6185,-144.5915,0,2.6,ml,,,,0.97,ak,ak20267595,2018-09-30T15:05:57.352Z,"68km SSW of Kaktovik, Alaska",earthquake,,1.1,,,automatic,ak,ak
+2018-09-30T14:41:29.510Z,34.002,-117.0178333,16.33,3.61,ml,166,17,0.06788,0.19,ci,ci37374890,2018-10-05T15:00:54.160Z,"4km ENE of Calimesa, CA",earthquake,0.1,0.25,0.14,290,reviewed,ci,ci
+2018-09-30T14:38:42.510Z,-1.2875,120.182,10,4.8,mb,,63,2.456,0.51,us,us1000h4p2,2018-09-30T16:25:44.040Z,"54km WNW of Kasiguncu, Indonesia",earthquake,6.1,1.9,0.089,39,reviewed,us,us
+2018-09-30T13:39:41.780Z,19.5115,-155.6578333,5.28,2.66,ml,51,44,0.03226,0.13,hv,hv70622372,2018-10-03T15:04:05.040Z,"22km ENE of Honaunau-Napoopoo, Hawaii",earthquake,0.25,0.36,0.157,36,reviewed,hv,hv
+2018-09-30T13:23:27.610Z,28.9185,57.508,10,4.7,mb,,156,4.125,0.54,us,us1000h4n3,2018-09-30T16:22:30.040Z,"79km ESE of Kuh Sefid, Iran",earthquake,9.2,1.9,0.108,26,reviewed,us,us
+2018-09-30T13:15:57.220Z,35.0578,26.2663,75.75,4.9,mb,,69,0.879,0.87,us,us1000h4mx,2018-09-30T16:03:06.040Z,"15km S of Palaikastron, Greece",earthquake,7.6,4.9,0.04,194,reviewed,us,us
+2018-09-30T10:52:23.210Z,-18.3722,-178.0949,551.19,6.6,mww,,22,3.717,1.14,us,us1000h4l1,2018-10-01T15:49:41.040Z,"260km NNE of Ndoi Island, Fiji",earthquake,9.6,5.8,0.058,29,reviewed,us,us
+2018-09-30T10:15:42.800Z,55.8929,-149.8917,6.97,3.4,ml,,239,2.304,0.71,us,us1000h4kr,2018-09-30T10:27:31.040Z,"261km SE of Kodiak, Alaska",earthquake,11.3,9,0.057,40,reviewed,us,us
+2018-09-30T09:50:36.040Z,56.0159,-149.9241,19.97,3.5,ml,,229,2.217,0.46,us,us1000h4kh,2018-09-30T10:17:31.040Z,"248km SE of Kodiak, Alaska",earthquake,11.8,10.6,0.059,38,reviewed,us,us
+2018-09-30T09:42:22.360Z,-28.5858,-178.1393,169.12,4.7,mb,,115,0.682,0.54,us,us1000h4kk,2018-09-30T10:10:15.040Z,"79km NNW of Raoul Island, New Zealand",earthquake,16.9,7.1,0.102,29,reviewed,us,us
+2018-09-30T09:40:21.930Z,56.0286,-149.9865,19.06,4.2,mb,,151,2.181,0.77,us,us1000h4kd,2018-09-30T19:18:07.776Z,"245km SE of Kodiak, Alaska",earthquake,8.8,7.5,0.136,15,reviewed,us,us
+2018-09-30T09:35:51.800Z,2.4101,127.3391,103.63,4.4,mb,,154,1.627,0.63,us,us1000h4ke,2018-09-30T09:57:41.040Z,"106km NW of Tobelo, Indonesia",earthquake,11.6,6.5,0.134,16,reviewed,us,us
+2018-09-30T09:29:06.580Z,55.9544,-149.9253,6.88,3.4,ml,,231,2.252,0.67,us,us1000h4k9,2018-09-30T09:37:53.040Z,"254km SE of Kodiak, Alaska",earthquake,10.9,8.8,0.057,40,reviewed,us,us
+2018-09-30T08:54:04.770Z,42.5574,142.0905,29.94,5,mww,,66,0.959,1,us,us1000h4k1,2018-10-01T02:41:46.229Z,"33km NW of Shizunai, Japan",earthquake,6.3,4.3,0.073,18,reviewed,us,us
+2018-09-30T08:46:40.850Z,33.4963333,-116.8058333,3.55,2.52,ml,119,26,0.01664,0.21,ci,ci37374666,2018-10-02T17:35:38.250Z,"8km NE of Aguanga, CA",earthquake,0.1,0.31,0.16,150,reviewed,ci,ci
+2018-09-30T08:40:07.530Z,18.266,-67.8086,135,3.07,md,16,180,0.6241,0.32,pr,pr2018273004,2018-09-30T11:32:02.598Z,"59km W of Rincon, Puerto Rico",earthquake,3.43,1.37,0.35,14,reviewed,pr,pr
+2018-09-30T08:39:08.120Z,37.1749,-97.4785,5,2.6,mb_lg,,146,0.118,0.24,us,us1000h4jy,2018-10-01T23:58:42.140Z,"13km SW of Wellington, Kansas",earthquake,1.6,1.7,0.098,27,reviewed,us,us
+2018-09-30T08:34:25.490Z,18.9413,-65.2163,31,2.81,md,4,341,1.0192,0.25,pr,pr2018273005,2018-09-30T11:32:16.238Z,"71km N of Culebra, Puerto Rico",earthquake,3.64,16.93,0.47,4,reviewed,pr,pr
+2018-09-30T04:40:40.180Z,18.2233,-67.1628,30,2.45,md,15,205,0.019,0.32,pr,pr2018273003,2018-09-30T08:16:21.344Z,"3km NW of Mayaguez, Puerto Rico",earthquake,0.89,1.4,0.23,13,reviewed,pr,pr
+2018-09-30T04:39:57.280Z,-22.6116,-67.5146,174.92,4.2,mb,,66,0.7,1.43,us,us1000h4is,2018-09-30T05:20:40.040Z,"79km ENE of San Pedro de Atacama, Chile",earthquake,9.2,7.6,0.215,6,reviewed,us,us
+2018-09-30T04:34:10.720Z,51.9164,-171.502,57.01,4.2,ml,,115,1.934,1.29,us,us1000h7jl,2018-10-06T01:32:09.040Z,"65km SSW of Amukta Island, Alaska",earthquake,8.9,9.9,0.148,6,reviewed,us,us
+2018-09-30T03:32:32.250Z,12.447,142.7549,10,4.8,mb,,90,2.352,1.06,us,us1000h7jj,2018-10-05T23:25:13.040Z,"226km WSW of Merizo Village, Guam",earthquake,6,1.9,0.154,14,reviewed,us,us
+2018-09-30T02:35:41.800Z,-10.8299,166.008,127.83,4.5,mb,,109,6.125,0.65,us,us1000h4i8,2018-09-30T03:21:23.040Z,"22km ESE of Lata, Solomon Islands",earthquake,6.1,8.3,0.085,41,reviewed,us,us
+2018-09-30T01:52:49.820Z,19.5151,119.9003,6.92,4.5,mb,,133,3.465,1.21,us,us1000h7jh,2018-10-05T21:59:33.040Z,"135km NNW of Davila, Philippines",earthquake,14.6,1,0.156,12,reviewed,us,us
+2018-09-30T01:22:58.672Z,60.3865,-143.1592,10.5,2.5,ml,,,,0.96,ak,ak20267233,2018-09-30T02:05:21.040Z,"53km NW of Cape Yakataga, Alaska",earthquake,,0.1,,,automatic,ak,ak
+2018-09-30T00:20:38.991Z,69.118,-147.1285,5.9,3.1,ml,,,,0.79,ak,ak20267197,2018-09-30T00:33:59.155Z,"128km NNW of Arctic Village, Alaska",earthquake,,0.5,,,automatic,ak,ak
+2018-09-30T00:13:47.668Z,69.0371,-146.943,7.5,3.2,ml,,,,0.67,ak,ak20267187,2018-09-30T18:07:01.844Z,"116km NNW of Arctic Village, Alaska",earthquake,,0.4,,,reviewed,ak,ak
+2018-09-29T23:21:24.320Z,20.3114,-65.6141,10,4.5,mb,,81,2.019,0.62,us,us1000h4gs,2018-09-30T02:18:45.914Z,"209km N of Loiza, Puerto Rico",earthquake,6.6,1.9,0.063,74,reviewed,us,us
+2018-09-29T21:49:21.350Z,18.7618,-67.402,50,2.77,md,3,332,0.81,0.03,pr,pr2018272007,2018-09-30T01:09:24.150Z,"43km NW of San Antonio, Puerto Rico",earthquake,3.37,7.46,0.08,3,reviewed,pr,pr
+2018-09-29T21:34:38.419Z,61.5097,-150.6059,48,2.8,ml,,,,0.71,ak,ak20267148,2018-09-29T22:23:49.040Z,"34km W of Big Lake, Alaska",earthquake,,0.6,,,automatic,ak,ak
+2018-09-29T19:25:35.510Z,37.1738,-97.4605,5.31,2.7,mb_lg,,70,0.131,0.36,us,us1000h4dn,2018-10-01T23:09:20.710Z,"12km SW of Wellington, Kansas",earthquake,1.6,5.4,0.066,60,reviewed,us,us
+2018-09-29T19:24:37.170Z,19.425,-155.6145,-1.7,2.66,ml,49,77,0.02536,0.16,hv,hv70620932,2018-09-29T21:58:02.040Z,"26km E of Honaunau-Napoopoo, Hawaii",earthquake,0.26,0.44,0.103,38,reviewed,hv,hv
+2018-09-29T19:15:39.390Z,-1.5199,120.1204,10,4.4,mb,,91,2.692,0.75,us,us1000h4dg,2018-09-29T21:41:11.040Z,"60km W of Kasiguncu, Indonesia",earthquake,6.1,1.9,0.107,25,reviewed,us,us
+2018-09-29T18:52:08.059Z,65.5262,-161.7902,0,2.7,ml,,,,0.74,ak,ak20267100,2018-10-02T15:06:50.040Z,"157km SSE of Kotzebue, Alaska",earthquake,,0.3,,,automatic,ak,ak
+2018-09-29T18:46:33.190Z,18.3443,-67.3265,19,2.57,md,6,271,0.2218,0.36,pr,pr2018272005,2018-09-29T20:37:57.246Z,"8km W of Rincon, Puerto Rico",earthquake,2.09,1.06,0.18,5,reviewed,pr,pr
+2018-09-29T18:34:41.530Z,-15.6404,168.2207,18.77,4.9,mww,,56,6.151,0.81,us,us1000h4cy,2018-10-02T14:52:15.040Z,"100km ENE of Lakatoro, Vanuatu",earthquake,7.7,3.9,0.078,16,reviewed,us,us
+2018-09-29T18:11:59.842Z,65.4715,-161.9793,0,3.3,ml,,,,0.8,ak,ak20267073,2018-10-02T14:33:15.040Z,"161km S of Kotzebue, Alaska",earthquake,,0.3,,,automatic,ak,ak
+2018-09-29T18:07:36.720Z,37.1798,-97.455,6.26,2.8,ml,,193,0.138,0.37,us,us1000h4cr,2018-10-02T14:30:15.017Z,"12km SW of Wellington, Kansas",earthquake,1.2,2.1,0.164,14,reviewed,ismp,ismp
+2018-09-29T17:53:26.700Z,5.0816,127.0862,91.84,4.5,mb,,65,2.479,0.6,us,us1000h4cn,2018-10-02T14:04:55.040Z,"173km SE of Pondaguitan, Philippines",earthquake,8.4,7.1,0.113,26,reviewed,us,us
+2018-09-29T17:19:39.233Z,69.5084,-143.7817,0,2.7,ml,,,,0.73,ak,ak20267056,2018-10-02T13:56:35.040Z,"69km S of Kaktovik, Alaska",earthquake,,0.7,,,automatic,ak,ak
+2018-09-29T17:03:00.160Z,19.5125,-155.6598333,5.48,2.79,ml,52,41,0.03219,0.13,hv,hv70620662,2018-10-02T13:53:59.040Z,"22km ENE of Honaunau-Napoopoo, Hawaii",earthquake,0.27,0.35,0.158,41,reviewed,hv,hv
+2018-09-29T16:43:27.449Z,51.4504,178.1745,39.4,2.5,ml,,,,0.29,ak,ak20267050,2018-09-29T20:35:32.959Z,"59km SSW of Little Sitkin Island, Alaska",earthquake,,0.8,,,reviewed,ak,ak
+2018-09-29T15:05:19.150Z,36.4625,71.1764,237,4.2,mb,,105,0.818,0.64,us,us1000h4am,2018-09-29T15:23:29.040Z,"40km SW of Ashkasham, Afghanistan",earthquake,5.3,8.6,0.159,11,reviewed,us,us
+2018-09-29T14:26:35.780Z,-19.0677,-69.6465,100.84,4.4,mb,,116,0.734,1.17,us,us1000h4a5,2018-09-29T14:49:39.974Z,"95km SE of Arica, Chile",earthquake,7.7,6.5,0.149,13,reviewed,us,us
+2018-09-29T13:51:36.641Z,69.5571,-144.7306,0,3.3,ml,,,,0.9,ak,ak20266916,2018-09-29T15:06:12.040Z,"76km SW of Kaktovik, Alaska",earthquake,,0.7,,,automatic,ak,ak
+2018-09-29T13:42:41.240Z,40.2571,65.3224,10,4.1,mb,,52,3.269,0.65,us,us1000h49v,2018-09-29T14:55:53.040Z,"6km N of Beshrabot, Uzbekistan",earthquake,6.8,2,0.158,11,reviewed,us,us
+2018-09-29T13:34:20.700Z,36.1973,-98.9253,5,2.7,mb_lg,,107,0.317,0.2,us,us1000h49t,2018-09-29T15:18:59.040Z,"17km N of Taloga, Oklahoma",earthquake,1.5,1.7,0.076,45,reviewed,us,us
+2018-09-29T13:32:54.670Z,44.1997,-66.2789,13.96,2.5,ml,,190,0.984,0.39,us,us1000h4jd,2018-10-01T01:51:50.707Z,"42km NNW of Yarmouth, Canada",earthquake,4.5,6.9,0.181,4,reviewed,us,us
+2018-09-29T12:45:47.260Z,36.1736,-97.4908,5.11,3.6,mb_lg,,26,0.224,0.18,us,us1000h490,2018-09-29T15:53:31.366Z,"22km SW of Perry, Oklahoma",earthquake,1.2,3.8,0.046,123,reviewed,us,us
+2018-09-29T12:04:25.000Z,1.5981,99.557,178.6,4.4,mb,,131,1.259,0.83,us,us1000h48p,2018-09-29T12:19:15.040Z,"41km NE of Padangsidempuan, Indonesia",earthquake,6.7,7.6,0.114,22,reviewed,us,us
+2018-09-29T11:31:33.638Z,65.4637,-161.9342,3.9,3.4,ml,,,,0.59,ak,ak20266794,2018-09-29T20:29:59.098Z,"162km S of Kotzebue, Alaska",earthquake,,0.3,,,reviewed,ak,ak
+2018-09-29T10:35:22.933Z,63.2245,-150.408,119.5,2.7,ml,,,,0.56,ak,ak20266773,2018-09-29T10:42:08.459Z,"75km WSW of Cantwell, Alaska",earthquake,,0.4,,,automatic,ak,ak
+2018-09-29T10:30:18.480Z,-1.4535,120.2112,10,5.1,mww,,48,2.592,0.7,us,us1000h47j,2018-10-02T17:29:21.040Z,"49km W of Kasiguncu, Indonesia",earthquake,2.1,1.9,0.073,18,reviewed,us,us
+2018-09-29T10:15:42.890Z,17.7373,-64.9493,36,2.47,md,5,347,0.9864,0.27,pr,pr2018272003,2018-09-29T20:39:01.150Z,"26km W of Christiansted, U.S. Virgin Islands",earthquake,8.82,12.82,0.29,2,reviewed,pr,pr
+2018-09-29T10:09:33.219Z,68.7223,-147.5016,0,2.6,ml,,,,0.79,ak,ak20266763,2018-09-29T10:20:11.740Z,"104km NW of Arctic Village, Alaska",earthquake,,0.4,,,automatic,ak,ak
+2018-09-29T10:04:54.530Z,65.4698,-161.7748,0,2.9,ml,,,,0.65,ak,ak20266760,2018-09-29T10:08:08.016Z,"163km SSE of Kotzebue, Alaska",earthquake,,0.3,,,automatic,ak,ak
+2018-09-29T09:25:54.900Z,42.7577,141.9477,35,4.5,mb,,75,1.163,0.45,us,us1000h479,2018-09-30T08:07:39.215Z,"25km ESE of Chitose, Japan",earthquake,3.7,2,0.088,38,reviewed,us,us
+2018-09-29T09:06:49.020Z,54.7534,58.0047,10,4.4,mb,,51,1.652,1.32,us,us1000h472,2018-09-29T09:25:00.040Z,"12km W of Katav-Ivanovsk, Russia",earthquake,6.7,2,0.088,37,reviewed,us,us
+2018-09-29T08:15:07.707Z,58.9219,-154.7849,126.7,2.6,ml,,,,0.81,ak,ak20266623,2018-09-29T08:23:27.897Z,"92km S of Old Iliamna, Alaska",earthquake,,0.5,,,automatic,ak,ak
+2018-09-29T07:40:11.760Z,-1.504,120.1773,10,5.1,mb,,56,2.634,0.49,us,us1000h46e,2018-09-29T07:56:46.040Z,"53km W of Kasiguncu, Indonesia",earthquake,6.1,1.9,0.081,50,reviewed,us,us
+2018-09-29T06:36:12.650Z,-1.2664,120.6793,10,4.8,mb,,78,2.103,0.92,us,us1000h463,2018-09-29T06:51:16.040Z,"16km NNW of Poso, Indonesia",earthquake,6.5,1.9,0.103,29,reviewed,us,us
+2018-09-29T06:13:35.270Z,-32.5212,-71.8051,21.4,4,mb,,182,0.43,0.49,us,us1000h45y,2018-09-29T23:16:36.441Z,"54km W of La Ligua, Chile",earthquake,4.2,7.8,0.26,4,reviewed,us,us
+2018-09-29T05:38:51.080Z,-18.371,-69.3333,132.51,4.7,mb,,68,0.789,0.89,us,us1000h45r,2018-09-29T05:58:13.040Z,"30km SE of Putre, Chile",earthquake,4.3,7.2,0.123,20,reviewed,us,us
+2018-09-29T04:56:58.168Z,69.0957,-146.4462,0,3.1,ml,,,,0.7,ak,ak20266554,2018-09-29T05:16:46.227Z,"114km NNW of Arctic Village, Alaska",earthquake,,0.5,,,automatic,ak,ak
+2018-09-29T04:48:39.410Z,61.4529,-149.9805,21,2.9,ml,,,,0.87,ak,ak20266529,2018-09-29T05:41:25.651Z,"7km S of Big Lake, Alaska",earthquake,,0.3,,,automatic,ak,ak
+2018-09-29T04:40:34.590Z,47.1076,152.6866,90.07,4.8,mb,,135,6.786,0.99,us,us1000h45a,2018-09-29T05:00:31.040Z,"Kuril Islands",earthquake,4.1,7.2,0.032,310,reviewed,us,us
+2018-09-29T02:32:50.860Z,-1.5727,120.0516,10,4.9,mb,,57,2.764,0.82,us,us1000h44u,2018-09-29T02:48:53.040Z,"69km WSW of Kasiguncu, Indonesia",earthquake,4.6,1.9,0.093,36,reviewed,us,us
+2018-09-29T02:17:46.720Z,32.3476667,-115.184,28.67,4.41,mw,34,172,0.1018,0.29,ci,ci37373442,2018-10-01T14:37:23.741Z,"1km SE of Delta, B.C., MX",earthquake,0.74,0.41,,6,reviewed,ci,ci
+2018-09-29T02:03:08.092Z,40.9931,-116.3849,0.5,2.5,ml,8,87.93,0.006,0.1797,nn,nn00658675,2018-09-29T17:22:31.832Z,"39km NW of Carlin, Nevada",explosion,,1.1,0.8,5,reviewed,nn,nn

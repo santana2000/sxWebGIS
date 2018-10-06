@@ -5,6 +5,7 @@ require([
     "esri/widgets/ScaleBar",
     "esri/Map",
     "esri/Basemap",
+    "esri/layers/WebTileLayer",
     "esri/widgets/Print",
     "esri/widgets/Print/TemplateOptions",
     "esri/widgets/LayerList",
@@ -13,6 +14,7 @@ require([
     "esri/layers/ImageryLayer",
     "esri/layers/GroupLayer",
     "esri/layers/MapImageLayer",
+    "esri/layers/CSVLayer",
 
     "dojo/domReady!"
 ], function (               //参数与调用对应
@@ -22,6 +24,7 @@ require([
     ScaleBar,
     Map,
     Basemap,
+    WebTileLayer,
     Print,
     TemplateOptions,
     LayerList,
@@ -29,10 +32,12 @@ require([
     FeatureLayer,
     ImageryLayer,
     GroupLayer,
-    MapImageLayer) {
+    MapImageLayer,
+    CSVLayer
+    ) {
 
-    var mymapx =new FeatureLayer({
-        url:'http://cache1.arcgisonline.cn/arcgis/rest/services/ChinaOnlineCommunity/MapServer',
+    var mymapx = new WebTileLayer({
+        urlTemplate: "http://cache1.arcgisonline.cn/arcgis/rest/services/ChinaOnlineCommunity/MapServer/tile/{level}/{row}/{col}",
 
     });
 
@@ -44,7 +49,8 @@ require([
     });
 
     var map = new Map({
-        basemap: "osm",
+        basemap: mymap,
+        ground: "world-elevation"
 
     });
 
@@ -178,6 +184,78 @@ require([
     //     visible: false
     // });
     // map.add(censusLayer,3);
+
+    //核密度热力图
+    const url =
+        "./img/2.5_week.csv";
+
+    const renderer = {
+        type: "heatmap",
+        colorStops: [
+            {
+                color: "rgba(63, 40, 102, 0)",
+                ratio: 0
+            },
+            {
+                color: "#472b77",
+                ratio: 0.083
+            },
+            {
+                color: "#4e2d87",
+                ratio: 0.166
+            },
+            {
+                color: "#563098",
+                ratio: 0.249
+            },
+            {
+                color: "#5d32a8",
+                ratio: 0.332
+            },
+            {
+                color: "#6735be",
+                ratio: 0.415
+            },
+            {
+                color: "#7139d4",
+                ratio: 0.498
+            },
+            {
+                color: "#7b3ce9",
+                ratio: 0.581
+            },
+            {
+                color: "#853fff",
+                ratio: 0.664
+            },
+            {
+                color: "#a46fbf",
+                ratio: 0.747
+            },
+            {
+                color: "#c29f80",
+                ratio: 0.830
+            },
+            {
+                color: "#e0cf40",
+                ratio: 0.913
+            },
+            {
+                color: "#ffff00",
+                ratio: 1
+            }],
+        maxPixelIntensity: 25,
+        minPixelIntensity: 0
+    };
+
+    const csvlayer01 = new CSVLayer({
+        url: url,
+        title: "Magnitude 2.5+ earthquakes from the last week",
+        copyright: "USGS Earthquakes",
+
+        renderer: renderer
+    });
+    map.add(csvlayer01);
 
     view.when(function() {
         var print = new Print({
