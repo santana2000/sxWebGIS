@@ -15,6 +15,7 @@ require([
     "esri/layers/GroupLayer",
     "esri/layers/MapImageLayer",
     "esri/layers/CSVLayer",
+    "esri/widgets/BasemapGallery",
 
     "dojo/domReady!"
 ], function (               //参数与调用对应
@@ -33,7 +34,8 @@ require([
     ImageryLayer,
     GroupLayer,
     MapImageLayer,
-    CSVLayer
+    CSVLayer,
+    BasemapGallery
     ) {
 
     var mymapx = new WebTileLayer({
@@ -284,6 +286,12 @@ require([
         view.ui.add(layerList, "top-right");
         });
 
+    //----------底图库切换------------
+    var basemapGallery = new BasemapGallery({
+        view: view,
+
+    });
+    //view.ui.add(basemapGallery, "top-right");
 
     //-----------位置坐标--------------
     var ccWidget = new CoordinateConversion({
