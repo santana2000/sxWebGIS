@@ -223,9 +223,9 @@ require([
         maxPixelIntensity: 55,
         minPixelIntensity: 0
     };
-    var url = "./pointme.csv";
+    //  var url = ;
     var heatlayer = new CSVLayer({
-        url: url,
+        url: "./point.csv",
         renderer: renderer
     });
     map.add(heatlayer,6);
