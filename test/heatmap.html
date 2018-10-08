@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Intro to MapView - Create a 2D map</title>
+    <style>
+        html, body, #viewDiv {
+            padding: 0;
+            margin: 0;
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+    <link rel="stylesheet" href="https://js.arcgis.com/4.9/esri/css/main.css">
+    <script src="https://js.arcgis.com/4.9/"></script>
+    <script>
+        require([
+            "esri/Map",
+            "esri/views/MapView",
+            "esri/layers/FeatureLayer"
+
+        ], function(Map, MapView,FeatureLayer){
+            var map = new Map({
+                basemap: "topo"
+            });
+            var view = new MapView({
+                container: "viewDiv",  // Reference to the scene div created in step 5
+                map: map,  // Reference to the map object created before the scene
+                zoom: 7,
+                center: [112.537674, 37.871594]
+            });
+
+            //popup模板
+            var template = {
+                title: "矿山崩塌信息:",
+                content: [{
+                    type: "fields",
+                    fieldInfos: [{
+                        fieldName: "RECID_NAME",
+                        label: "所属矿山",
+                        visible: true
+                    }, {
+                        fieldName: "HAPPEN_FLA",
+                        label: "是否发生",
+                        visible: true,
+                    }, {
+                        fieldName: "HAPPEN_DAT",
+                        label: "发生时间",
+                        visible: true
+                    }, {
+                        fieldName: "COLLAPSE_T",
+                        label: "崩塌类型",
+                        visible: true
+                    }, {
+                        fieldName: "SLOPE_TYPE",
+                        label: "斜坡类型",
+                        visible: true
+                    }, {
+                        fieldName: "TOP_EVEVAT",
+                        label: "斜坡高程",
+                        visible: true
+                    }, {
+                        fieldName: "BUTTOM_EVE",
+                        label: "坡底高程",
+                        visible: true
+                    }, {
+                        fieldName: "MEMO",
+                        label: "崩塌描述",
+                        visible: true
+                    }]
+                },
+                    {
+                        type: "text",
+                        text: "崩塌信息详情："
+                    },{
+                        type: "media",
+                        mediaInfos: [{
+                            title: "<b>平面图</b>",
+                            type: "image",
+                            value: {
+
+
+                                //sourceURL: "./img/sximg/{PMTX_FILEI}_{PMTX}_看图王.jpg"
+                                sourceURL: "./img/2d129c5a15f14556be1de105298608f4_007-1_看图王.jpg"
+
+                            }
+                        },{
+                            title: "<b>剖面图</b>",
+                            type: "image",
+                            value: {
+
+
+                                //sourceURL: "./img/sximg/{PMTX_FILEI}_{PMTX}_看图王.jpg"
+                                sourceURL: "./img/1b0ae76d4b394f54a5479bfde7377271_144-1_看图王.jpg"
+
+                            }
+                        }]
+                    }
+                ]
+            };
+            //崩塌实验
+
+            const renderer = {
+                type: "heatmap",
+                colorStops: [
+                    {
+                        color: "rgba(63, 40, 102, 0)",
+                        ratio: 0
+                    },
+                    {
+                        color: "#472b77",
+                        ratio: 0.083
+                    },
+                    {
+                        color: "#4e2d87",
+                        ratio: 0.166
+                    },
+                    {
+                        color: "#563098",
+                        ratio: 0.249
+                    },
+                    {
+                        color: "#5d32a8",
+                        ratio: 0.332
+                    },
+                    {
+                        color: "#6735be",
+                        ratio: 0.415
+                    },
+                    {
+                        color: "#7139d4",
+                        ratio: 0.498
+                    },
+                    {
+                        color: "#7b3ce9",
+                        ratio: 0.581
+                    },
+                    {
+                        color: "#853fff",
+                        ratio: 0.664
+                    },
+                    {
+                        color: "#a46fbf",
+                        ratio: 0.747
+                    },
+                    {
+                        color: "#c29f80",
+                        ratio: 0.830
+                    },
+                    {
+                        color: "#e0cf40",
+                        ratio: 0.913
+                    },
+                    {
+                        color: "#ffff00",
+                        ratio: 1
+                    }],
+                blurRadius:10,
+                maxPixelIntensity: 55,
+                minPixelIntensity: 0
+            };
+
+            var pointLayer = new FeatureLayer({
+                url: "https://localhost:6443/arcgis/rest/services/sxlayer/landcollapse/MapServer",
+                outFields: ["*"],
+                popupTemplate: template,
+                title:"collapse",
+                renderer:renderer,
+                // visible:false
+
+            });
+            map.add(pointLayer,3);
+
+        });
+    </script>
+</head>
+<body>
+<div id="viewDiv"></div>
+</body>
+</html>

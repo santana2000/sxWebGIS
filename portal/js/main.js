@@ -16,6 +16,7 @@ require([
     "esri/layers/MapImageLayer",
     "esri/layers/CSVLayer",
     "esri/widgets/BasemapGallery",
+    //"esri/renderers/HeatmapRenderer",
 
     "dojo/domReady!"
 ], function (               //参数与调用对应
@@ -35,11 +36,12 @@ require([
     GroupLayer,
     MapImageLayer,
     CSVLayer,
-    BasemapGallery
+    BasemapGallery,
+   // HeatmapRenderer
     ) {
 
     var mymapx = new WebTileLayer({
-        urlTemplate: "http://cache1.arcgisonline.cn/arcgis/rest/services/ChinaOnlineCommunity/MapServer/tile/{level}/{row}/{col}",
+        urlTemplate: "https://cache1.arcgisonline.cn/arcgis/rest/services/ChinaOnlineCommunity/MapServer/tile/{level}/{row}/{col}",
 
     });
 
@@ -68,7 +70,7 @@ require([
         url: "https://localhost:6443/arcgis/rest/services/w/MapServer",
         visible:false
     });
-    map.add(wLayer);
+    ///map.add(wLayer);
 
     //全国区划
     // var chinaLayer = new FeatureLayer({
@@ -151,45 +153,6 @@ require([
             ]
     };
     //崩塌实验
-    var pointLayer = new FeatureLayer({
-        url: "https://localhost:6443/arcgis/rest/services/sxlayer/landcollapse/MapServer",
-        outFields: ["*"],
-        popupTemplate: template,
-        title:"pt",
-        visible:false
-
-    });
-
-    //遥感影像
-    var Layer2017 = new ImageryLayer({
-        url: "https://localhost:6443/arcgis/rest/services/test1/Shanxi_2017N/ImageServer",
-        format: "jpgpng",
-        title:"2017",
-        visible:false
-    });
-    map.add(Layer2017,2);
-
-    //图层组控制
-    var demoGroupLayer = new GroupLayer({
-        title: "山西省矿山数据图层",
-        visible: false,
-        visibilityMode: "exclusive",
-        layers: [pointLayer,railLayer],
-        opacity: 0.75
-    });
-    map.add(demoGroupLayer);
-
-    //online
-    // var censusLayer = new MapImageLayer({
-    //     url: "http://sampleserver6.arcgisonline.com/arcgis/rest/services/Census/MapServer",
-    //     title: "US Sample Census",
-    //     visible: false
-    // });
-    // map.add(censusLayer,3);
-
-    //核密度热力图
-    const url =
-        "./img/2.5_week.csv";
 
     const renderer = {
         type: "heatmap",
@@ -246,18 +209,71 @@ require([
                 color: "#ffff00",
                 ratio: 1
             }],
-        maxPixelIntensity: 25,
+        blurRadius:10,
+        maxPixelIntensity: 55,
         minPixelIntensity: 0
     };
+
+    var pointLayer = new FeatureLayer({
+        url: "https://localhost:6443/arcgis/rest/services/sxlayer/landcollapse/MapServer",
+        outFields: ["*"],
+        popupTemplate: template,
+        title:"collapse",
+        renderer:renderer,
+       // visible:false
+
+    });
+    map.add(pointLayer);
+
+
+    //遥感影像
+    var Layer2017 = new ImageryLayer({
+        url: "https://localhost:6443/arcgis/rest/services/test1/Shanxi_2017N/ImageServer",
+        format: "jpgpng",
+        title:"2017",
+        visible:false
+    });
+    map.add(Layer2017,2);
+
+    //图层组控制
+    var demoGroupLayer = new GroupLayer({
+        title: "山西省矿山数据图层",
+        visible: false,
+        visibilityMode: "exclusive",
+        layers: [railLayer],
+        opacity: 0.75
+    });
+    map.add(demoGroupLayer);
+
+    //online
+    // var censusLayer = new MapImageLayer({
+    //     url: "http://sampleserver6.arcgisonline.com/arcgis/rest/services/Census/MapServer",
+    //     title: "US Sample Census",
+    //     visible: false
+    // });
+    // map.add(censusLayer,3);
+
+    //核密度热力图
+
+
+
+
+
+
+
+    const url =
+        "./img/2.5_week.csv";
+
+
 
     const csvlayer01 = new CSVLayer({
         url: url,
         title: "Magnitude 2.5+ earthquakes from the last week",
         copyright: "USGS Earthquakes",
 
-        renderer: renderer
+
     });
-    map.add(csvlayer01);
+    //map.add(csvlayer01);
 
     view.when(function() {
         var print = new Print({
