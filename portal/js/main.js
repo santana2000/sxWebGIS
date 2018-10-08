@@ -152,9 +152,19 @@ require([
             }
             ]
     };
-    //崩塌实验
+    //崩塌点图层
+    var pointLayer = new FeatureLayer({
+        url: "https://localhost:6443/arcgis/rest/services/sxlayer/landcollapse/MapServer",
+        outFields: ["*"],
+        popupTemplate: template,
+        title:"collapse",
+        visible:false
 
-    const renderer = {
+    });
+    map.add(pointLayer);
+
+    //核密度热力图
+    var renderer = {
         type: "heatmap",
         colorStops: [
             {
@@ -213,19 +223,12 @@ require([
         maxPixelIntensity: 55,
         minPixelIntensity: 0
     };
-
-    var pointLayer = new FeatureLayer({
-        url: "https://localhost:6443/arcgis/rest/services/sxlayer/landcollapse/MapServer",
-        outFields: ["*"],
-        popupTemplate: template,
-        title:"collapse",
-        renderer:renderer,
-       // visible:false
-
+    var url = "./pointme.csv";
+    var heatlayer = new CSVLayer({
+        url: url,
+        renderer: renderer
     });
-    map.add(pointLayer);
-
-
+    map.add(heatlayer,6);
     //遥感影像
     var Layer2017 = new ImageryLayer({
         url: "https://localhost:6443/arcgis/rest/services/test1/Shanxi_2017N/ImageServer",
@@ -253,27 +256,7 @@ require([
     // });
     // map.add(censusLayer,3);
 
-    //核密度热力图
 
-
-
-
-
-
-
-    const url =
-        "./img/2.5_week.csv";
-
-
-
-    const csvlayer01 = new CSVLayer({
-        url: url,
-        title: "Magnitude 2.5+ earthquakes from the last week",
-        copyright: "USGS Earthquakes",
-
-
-    });
-    //map.add(csvlayer01);
 
     view.when(function() {
         var print = new Print({
