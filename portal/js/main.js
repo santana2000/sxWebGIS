@@ -16,7 +16,7 @@ require([
     "esri/layers/MapImageLayer",
     "esri/layers/CSVLayer",
     "esri/widgets/BasemapGallery",
-    //"esri/renderers/HeatmapRenderer",
+
 
     "dojo/domReady!"
 ], function (               //参数与调用对应
@@ -36,8 +36,8 @@ require([
     GroupLayer,
     MapImageLayer,
     CSVLayer,
-    BasemapGallery,
-   // HeatmapRenderer
+    BasemapGallery
+
     ) {
 
     var mymapx = new WebTileLayer({
@@ -70,7 +70,7 @@ require([
         url: "https://localhost:6443/arcgis/rest/services/w/MapServer",
         visible:false
     });
-    ///map.add(wLayer);
+    map.add(wLayer);
 
     //全国区划
     // var chinaLayer = new FeatureLayer({
@@ -161,7 +161,7 @@ require([
         visible:false
 
     });
-    map.add(pointLayer);
+    map.add(pointLayer,2);
 
     //核密度热力图
     var renderer = {
@@ -225,18 +225,20 @@ require([
     };
     //  var url = ;
     var heatlayer = new CSVLayer({
-        url: "./point.csv",
-        renderer: renderer
+        url: "./point.csv" ,
+        title:'cs',
+        renderer: renderer,
+        visible:true
     });
     map.add(heatlayer,6);
     //遥感影像
     var Layer2017 = new ImageryLayer({
-        url: "https://localhost:6443/arcgis/rest/services/test1/Shanxi_2017N/ImageServer",
+        url: "https://localhost:6443/arcgis/rest/services/sxlayer/2017Shanxi_yasuo/ImageServer",
         format: "jpgpng",
         title:"2017",
         visible:false
     });
-    map.add(Layer2017,2);
+    map.add(Layer2017,1);
 
     //图层组控制
     var demoGroupLayer = new GroupLayer({
