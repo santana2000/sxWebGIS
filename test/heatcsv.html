@@ -19,8 +19,12 @@
             "esri/Map",
             "esri/views/MapView",
             "esri/layers/CSVLayer",
+            "esri/layers/FeatureLayer",
+            "esri/layers/ImageryLayer",
+            "esri/layers/GroupLayer",
+            "esri/widgets/LayerList"
 
-        ], function(Map, MapView,CSVLayer){
+        ], function(Map, MapView,CSVLayer,FeatureLayer,ImageryLayer,GroupLayer,LayerList){
             var map = new Map({
                 basemap: "topo"
             });
@@ -30,6 +34,24 @@
                 zoom: 7,
                 center: [112.537674, 37.871594]
             });
+
+
+            //遥感影像
+            var Layer2017 = new ImageryLayer({
+                url: "https://localhost:6443/arcgis/rest/services/sxlayer/2017Shanxi_yasuo/ImageServer",
+                format: "jpgpng",
+                title:"2017",
+
+            });
+            map.add(Layer2017,2);
+            //全国铁路
+            var railLayer = new FeatureLayer({
+                url: "https://localhost:6443/arcgis/rest/services/test1/railway/MapServer",
+
+            });
+            map.add(railLayer,1);
+
+
 
             //popup模板
             var template = {
@@ -99,7 +121,9 @@
                     }
                 ]
             };
-            //崩塌实验
+
+
+            //
             const url = './tpoint.csv';
             const renderer = {
                 type: "heatmap",
@@ -167,8 +191,21 @@
                 renderer: renderer
             });
 
-            map.add(layer,3);
+           map.add(layer,3);
 
+            var demoGroupLayer = new GroupLayer({
+                title: "山西省矿山数据图层",
+
+                visibilityMode: "exclusive",
+                layers: [],
+                opacity: 0.75
+            });
+            //map.add(demoGroupLayer);
+
+            var layerList = new LayerList({
+                view: view
+            });
+            view.ui.add(layerList, "top-right");
         });
     </script>
 </head>
