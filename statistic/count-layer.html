@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>count</title>
+    <style>
+        select {
+            border-color: #209e9b;
+            background-color: #c5cbd1;
+            font-size: 20px;
+            height: 35px;
+            margin-left: 30px;
+        }
+        button {
+            font-size: 20px;
+            margin-left: 10px;
+        }
+        #position   {
+            margin: 25px;
+            padding: 5px    ;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="load.js"></script>
+
+</head>
+<body>
+<div>
+    <select id="layers">
+        <option value="1-">矿山情况</option>
+        <option value="2-collapse">矿山崩塌</option>
+        <option value="3-">矿山滑坡</option>
+        <option>矿山泥石流</option>
+        <option>矿山地面塌陷和地裂缝</option>
+        <option>地形地貌和土地破坏</option>
+        <option>矿山土地压占与破坏</option>
+        <option>地下含水层</option>
+        <option>矿山三废</option>
+    </select>
+
+    <button>查询</button>
+</div>
+<div id="position">
+
+</div>
+</body>
+</html>

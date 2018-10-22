@@ -1,42 +1,43 @@
 require([
-    "esri/tasks/Locator",
-    "esri/widgets/CoordinateConversion",
-    "esri/widgets/Compass",
-    "esri/widgets/ScaleBar",
+
     "esri/Map",
     "esri/Basemap",
-    "esri/layers/WebTileLayer",
-    "esri/widgets/Print",
-    "esri/widgets/Print/TemplateOptions",
-    "esri/widgets/LayerList",
     "esri/views/MapView",
+    "esri/layers/WebTileLayer",
+    "esri/layers/CSVLayer",
     "esri/layers/FeatureLayer",
     "esri/layers/ImageryLayer",
     "esri/layers/GroupLayer",
     "esri/layers/MapImageLayer",
-    "esri/layers/CSVLayer",
-   // "esri/widgets/BasemapGallery",
+    "esri/tasks/Locator",
+    "esri/widgets/Print",
+    "esri/widgets/Print/TemplateOptions",
+    "esri/widgets/LayerList",
+    "esri/widgets/CoordinateConversion",
+    "esri/widgets/Compass",
+    "esri/widgets/ScaleBar",
+    "esri/widgets/BasemapGallery",
 
 
-    "dojo/domReady!"
 ], function (               //参数与调用对应
-    Locator,
-    CoordinateConversion,
-    Compass,
-    ScaleBar,
+
     Map,
     Basemap,
-    WebTileLayer,
-    Print,
-    TemplateOptions,
-    LayerList,
     MapView,
+    WebTileLayer,
+    CSVLayer,
     FeatureLayer,
     ImageryLayer,
     GroupLayer,
     MapImageLayer,
-    CSVLayer,
-    //BasemapGallery
+    Locator,
+    Print,
+    TemplateOptions,
+    LayerList,
+    CoordinateConversion,
+    Compass,
+    ScaleBar,
+    BasemapGallery
 
 ) {
 
@@ -52,9 +53,10 @@ require([
 
     var map = new Map({
         basemap: mymap,
-        ground: "world-elevation"
+        //ground: "world-elevation"
 
     });
+    map.basmap = null;
 
     var view = new MapView({
         container: "viewDiv",  // Reference to the scene div created in step 5
@@ -64,92 +66,10 @@ require([
     });
 
     //动态图层
-    var wLayer = new MapImageLayer({
+    var DLayer = new MapImageLayer({
         url: "https://localhost:6443/arcgis/rest/services/w/MapServer",
         visible:false
     });
-    map.add(wLayer);
-
-    //核密度热力图
-    var renderer = {
-        type: "heatmap",
-        colorStops: [
-            {
-                color: "rgba(63, 40, 102, 0)",
-                ratio: 0
-            },
-            {
-                color: "#472b77",
-                ratio: 0.083
-            },
-            {
-                color: "#4e2d87",
-                ratio: 0.166
-            },
-            {
-                color: "#563098",
-                ratio: 0.249
-            },
-            {
-                color: "#5d32a8",
-                ratio: 0.332
-            },
-            {
-                color: "#6735be",
-                ratio: 0.415
-            },
-            {
-                color: "#7139d4",
-                ratio: 0.498
-            },
-            {
-                color: "#7b3ce9",
-                ratio: 0.581
-            },
-            {
-                color: "#853fff",
-                ratio: 0.664
-            },
-            {
-                color: "#a46fbf",
-                ratio: 0.747
-            },
-            {
-                color: "#c29f80",
-                ratio: 0.830
-            },
-            {
-                color: "#e0cf40",
-                ratio: 0.913
-            },
-            {
-                color: "#ffff00",
-                ratio: 1
-            }],
-        blurRadius:10,
-        maxPixelIntensity: 55,
-        minPixelIntensity: 0
-    };
-      var url = "test/tpoint.csv";
-    var heatlayer = new CSVLayer({
-        url:url ,
-        title:'cs',
-        renderer: renderer,
-        visible:true
-    });
-    map.add(heatlayer);
-
-    //全国区划
-    // var chinaLayer = new FeatureLayer({
-    //     url: "https://localhost:6443/arcgis/rest/services/test1/china/MapServer"
-    // });
-    // map.add(chinaLayer, 0);
-    //全国铁路
-    var railLayer = new FeatureLayer({
-        url: "https://localhost:6443/arcgis/rest/services/test1/railway/MapServer",
-        visible:false
-    });
-    //map.add(railLayer,1);
 
     //popup模板
     var template = {
@@ -226,10 +146,8 @@ require([
         popupTemplate: template,
         title:"collapse",
         visible:false
-
     });
     map.add(pointLayer,2);
-
 
     //遥感影像
     var Layer2017 = new ImageryLayer({
@@ -245,10 +163,80 @@ require([
         title: "山西省矿山数据图层",
         visible: false,
         visibilityMode: "exclusive",
-        layers: [railLayer],
+        layers: [ DLayer],
         opacity: 0.75
     });
     map.add(demoGroupLayer);
+    //核密度热力图
+
+    const renderer = {
+        type: "heatmap",
+        colorStops: [
+            {
+                color: "rgba(63, 40, 102, 0)",
+                ratio: 0
+            },
+            {
+                color: "#472b77",
+                ratio: 0.083
+            },
+            {
+                color: "#4e2d87",
+                ratio: 0.166
+            },
+            {
+                color: "#563098",
+                ratio: 0.249
+            },
+            {
+                color: "#5d32a8",
+                ratio: 0.332
+            },
+            {
+                color: "#6735be",
+                ratio: 0.415
+            },
+            {
+                color: "#7139d4",
+                ratio: 0.498
+            },
+            {
+                color: "#7b3ce9",
+                ratio: 0.581
+            },
+            {
+                color: "#853fff",
+                ratio: 0.664
+            },
+            {
+                color: "#a46fbf",
+                ratio: 0.747
+            },
+            {
+                color: "#c29f80",
+                ratio: 0.830
+            },
+            {
+                color: "#e0cf40",
+                ratio: 0.913
+            },
+            {
+                color: "#ffff00",
+                ratio: 1
+            }],
+        blurRadius:14,
+        maxPixelIntensity: 50,
+        minPixelIntensity: 0
+    };
+    const url = 'point.csv';
+    const layer = new CSVLayer({
+        url: url,
+        popupTemplate: template,
+        renderer: renderer,
+        opacity:0.7
+    });
+
+    map.add(layer,3);
 
     //online
     // var censusLayer = new MapImageLayer({
@@ -258,41 +246,60 @@ require([
     // });
     // map.add(censusLayer,3);
 
-
-
-    view.when(function() {
-        var print = new Print({
-            view: view,
-            //templateOptions:templateOptions,
-            //printServiceUrl: "https://utility.arcgisonline.com/arcgis/rest/services/Utilities/PrintingTools/GPServer/Export%20Web%20Map%20Task"
-            printServiceUrl: "https://localhost:6443/arcgis/rest/services/Utilities/PrintingTools/GPServer/Export%20Web%20Map%20Task"
-
-        });
-
-        var layerList = new LayerList({
-            view: view
-        });
-
-        // //地图打印
-        // var templateOptions = new TemplateOptions({
-        //     title: "My Print",
-        //     author: "Sam",
-        //     copyright: "Shanxi",
-        //     format:"pdf",
-        //     //layout: "map-only",
-        //     legendEnabled: false
-        // });
-
-        view.ui.add(print, "top-right");
-        view.ui.add(layerList, "top-right");
+    // 地图打印
+    var templateOptions = new TemplateOptions({
+        title: "My Print",
+        author: "Sam",
+        copyright: "Shanxi",
+        format:"pdf",
+        //layout: "map-only",
+        legendEnabled: false
     });
 
-    //----------底图库切换------------
-    // var basemapGallery = new BasemapGallery({
-    //     view: view,
-    //
+    var print = new Print({
+        view: view,
+        templateOptions:templateOptions,
+        //printServiceUrl: "https://utility.arcgisonline.com/arcgis/rest/services/Utilities/PrintingTools/GPServer/Export%20Web%20Map%20Task"
+        printServiceUrl: "https://localhost:6443/arcgis/rest/services/Utilities/PrintingTools/GPServer/Export%20Web%20Map%20Task"
+
+    });
+
+    var layerList = new LayerList({
+        view: view
+    });
+    // //地图打印
+    // var templateOptions = new TemplateOptions({
+    //     title: "My Print",
+    //     author: "Sam",
+    //     copyright: "Shanxi",
+    //     format:"pdf",
+    //     //layout: "map-only",
+    //     legendEnabled: false
     // });
-    //view.ui.add(basemapGallery, "top-right");
+    view.ui.add(print, "top-right");
+    view.ui.add(layerList, "top-right");
+
+
+    //----------底图库切换------------
+    var basemapGallery = new BasemapGallery({
+        view: view,
+
+    });
+    view.ui.add(basemapGallery, "bottom-left");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     //-----------位置坐标--------------
     var ccWidget = new CoordinateConversion({

@@ -54,27 +54,37 @@ require([
 
 
     //遥感影像
+    var Layer1990 = new ImageryLayer({
+        url: "https://localhost:6443/arcgis/rest/services/sxlayer/Shanxi1990n/ImageServer",
+        format: "jpgpng",
+        title:"1990",
+    });
+    var Layer2000 = new ImageryLayer({
+        url: "https://localhost:6443/arcgis/rest/services/sxlayer/Shanxi_2000n/ImageServer",
+        format: "jpgpng",
+        title:"2000",
+    });
     var Layer2017 = new ImageryLayer({
         url: "https://localhost:6443/arcgis/rest/services/sxlayer/2017Shanxi_yasuo/ImageServer",
         format: "jpgpng",
         title:"2017",
-
     });
-    // map.add(Layer2017,2);
+
     var demoGroupLayer = new GroupLayer({
-        title: "山西省矿山数据图层",
+        title: "遥感影像变化",
 
         visibilityMode: "exclusive",
-        layers: [Layer2017],
-        opacity: 0.75
+        layers: [Layer1990,Layer2000,Layer2017],
+        opacity: 0.85,
+        visible:false
     });
     map.add(demoGroupLayer);
 
     //全国铁路
-    var railLayer = new FeatureLayer({
-        url: "https://localhost:6443/arcgis/rest/services/test1/railway/MapServer",
-
-    });
+    // var railLayer = new FeatureLayer({
+    //     url: "https://localhost:6443/arcgis/rest/services/test1/railway/MapServer",
+    //
+    // });
     //map.add(railLayer,1);
 
     //popup模板
@@ -118,7 +128,7 @@ require([
         },
             {
                 type: "text",
-                text: "崩塌信息详情："
+                text: "<a href='testx.html' target='_blank'>崩塌信息详情：</a>"
             },{
                 type: "media",
                 mediaInfos: [{
@@ -128,7 +138,7 @@ require([
 
 
                         //sourceURL: "./img/sximg/{PMTX_FILEI}_{PMTX}_看图王.jpg"
-                        sourceURL: "./img/2d129c5a15f14556be1de105298608f4_007-1_看图王.jpg"
+                        sourceURL: "../img/2d129c5a15f14556be1de105298608f4_007-1_看图王.jpg"
 
                     }
                 },{
@@ -138,7 +148,7 @@ require([
 
 
                         //sourceURL: "./img/sximg/{PMTX_FILEI}_{PMTX}_看图王.jpg"
-                        sourceURL: "./img/1b0ae76d4b394f54a5479bfde7377271_144-1_看图王.jpg"
+                        sourceURL: "../img/1b0ae76d4b394f54a5479bfde7377271_144-1_看图王.jpg"
 
                     }
                 }]
@@ -154,7 +164,7 @@ require([
         visible:false
 
     });
-    map.add(pointLayer,2);
+    map.add(pointLayer,3);
 
     //核密度热力图
     const url = './tpoint.csv';
@@ -221,10 +231,11 @@ require([
     const layer = new CSVLayer({
         url: url,
         popupTemplate: template,
-        renderer: renderer
+        renderer: renderer,
+        opacity:0.85,
+        visible:false
     });
-
-    map.add(layer,3);
+    map.add(layer,2);
 
 
 
@@ -306,3 +317,4 @@ $(function () {
         $('.esri-print').slideToggle("normal");
     });
 });
+

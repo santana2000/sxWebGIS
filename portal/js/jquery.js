@@ -23,7 +23,7 @@
         // (such as Node.js), expose a factory as module.exports.
         // This accentuates the need for the creation of a real `window`.
         // e.g. var jQuery = require("jquery")(window);
-        // See ticket #14549 for more info.
+        // See ticket #14549 for more-info.
         module.exports = global.document ?
             factory( global, true ) :
             function( w ) {
@@ -4872,7 +4872,7 @@
     }
 
 // Support: IE <=9 only
-// See #13393 for more info
+// See #13393 for more-info
     function safeActiveElement() {
         try {
             return document.activeElement;
