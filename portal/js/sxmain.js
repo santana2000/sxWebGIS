@@ -71,7 +71,7 @@ require([
         format: "jpgpng",
         title:"2017",
     });
-    var demoGroupLayer = new GroupLayer({
+    var imgGroupLayer = new GroupLayer({
         title: "遥感影像变化",
 
         visibilityMode: "exclusive",
@@ -79,7 +79,7 @@ require([
         opacity: 0.85,
         visible:false
     });
-    map.add(demoGroupLayer);
+    map.add(imgGroupLayer);
 
 
 //==============================点图层===================================
@@ -136,7 +136,7 @@ require([
         popupTemplate: template1,
         title:"mine",
     });
-    map.add(mineLayer,1);
+    map.add(mineLayer);
 //2
     var template2 = {
         title: "矿山崩塌信息:",
@@ -197,14 +197,14 @@ require([
         ]
     };
     //崩塌点图层
-    var pointLayer = new FeatureLayer({
+    var pointLayer2 = new FeatureLayer({
         url: "https://localhost:6443/arcgis/rest/services/sxlayer/landcollapse/MapServer",
         outFields: ["*"],
         popupTemplate: template2,
         title:"collapse",
 
     });
-    map.add(pointLayer,2);
+    map.add(pointLayer2);
 
 //3
     var template3 = {
@@ -280,14 +280,14 @@ require([
         ]
     };
     //崩塌点图层
-    var pointLayer = new FeatureLayer({
+    var pointLayer3 = new FeatureLayer({
         url: "https://localhost:6443/arcgis/rest/services/3landslide/MapServer",
         outFields: ["*"],
         popupTemplate: template3,
         title:"矿山滑坡",
 
     });
-    map.add(pointLayer,3);
+    map.add(pointLayer3);
 //4
     var template4 = {
         title: "矿山泥石流信息:",
@@ -337,14 +337,14 @@ require([
         ]
     };
     //崩塌点图层
-    var pointLayer = new FeatureLayer({
+    var pointLayer4 = new FeatureLayer({
         url: "https://localhost:6443/arcgis/rest/services/sxlayer/4stoneflow/MapServer",
         outFields: ["*"],
         popupTemplate: template4,
         title:"矿山泥石流",
 
     });
-    map.add(pointLayer,4);
+    map.add(pointLayer4);
 //5
     var template5 = {
         title: "矿山地面塌陷信息:",
@@ -402,13 +402,13 @@ require([
         ]
     };
     //崩塌点图层
-    var pointLayer = new FeatureLayer({
+    var pointLayer5 = new FeatureLayer({
         url: "https://localhost:6443/arcgis/rest/services/sxlayer/5地面塌陷/MapServer",
         outFields: ["*"],
         popupTemplate: template5,
         title:"矿山地面塌陷",
     });
-    map.add(pointLayer,5);
+    map.add(pointLayer5);
 //6
     var template6 = {
         title: "地下含水层与破坏信息:",
@@ -448,13 +448,13 @@ require([
         ]
     };
     //崩塌点图层
-    var pointLayer = new FeatureLayer({
+    var pointLayer6 = new FeatureLayer({
         url: "https://localhost:6443/arcgis/rest/services/sxlayer/6water/MapServer",
         outFields: ["*"],
         popupTemplate: template6,
         title:"地下含水层与破坏",
     });
-    map.add(pointLayer,6);
+    map.add(pointLayer6);
 //7
     var template7 = {
         title: "地形地貌与土地破坏信息:",
@@ -488,13 +488,13 @@ require([
         ]
     };
     //崩塌点图层
-    var pointLayer = new FeatureLayer({
+    var pointLayer7 = new FeatureLayer({
         url: "https://localhost:6443/arcgis/rest/services/sxlayer/7土地破坏/MapServer",
         outFields: ["*"],
         popupTemplate: template7,
         title:"地形地貌与土地破坏",
     });
-    map.add(pointLayer,7);
+    map.add(pointLayer7);
 //8
     var template8 = {
         title: "矿山三废信息:",
@@ -519,18 +519,28 @@ require([
         ]
     };
     //崩塌点图层
-    var pointLayer = new FeatureLayer({
+    var pointLayer8 = new FeatureLayer({
         url: "https://localhost:6443/arcgis/rest/services/sxlayer/8三废/MapServer",
         outFields: ["*"],
         popupTemplate: template8,
         title:"矿山三废",
     });
-    map.add(pointLayer,8);
-    //==============================点图层===================================
+    map.add(pointLayer8);
+
+    var mineGroupLayer = new GroupLayer({
+        title: "矿山信息",
+
+        visibilityMode: "exclusive",
+        layers: [mineLayer,pointLayer2,pointLayer3,pointLayer4,
+            pointLayer5,pointLayer6,pointLayer7,pointLayer8],
+        opacity: 0.85,
+        visible:false
+    });
+    map.add(mineGroupLayer);
+    //==============================点图层=================================================
 
 
-    //核密度热力图
-    const url = './tpoint.csv';
+    //==============================核密度热力图============================================
     const renderer = {
         type: "heatmap",
         colorStops: [
@@ -591,15 +601,50 @@ require([
         minPixelIntensity: 0
     };
 
-    const layer = new CSVLayer({
-        url: url,
+    const csv2 = new CSVLayer({
+        url: '../portal/csv/2col.csv',
        // popupTemplate: template,
         renderer: renderer,
         opacity:0.85,
+        visible:false,
+        title:'崩塌点核密度'
+    });
+    map.add(csv2);
+    const csv3 = new CSVLayer({
+        url: '../portal/csv/3sli.csv',
+       // popupTemplate: template,
+        renderer: renderer,
+        opacity:0.85,
+        visible:false,
+        title:'滑坡点核密度'
+    });
+    map.add(csv3);
+    const csv4 = new CSVLayer({
+        url: '../portal/csv/4deb.csv',
+        // popupTemplate: template,
+        renderer: renderer,
+        opacity:0.85,
+        visible:false,
+        title:'泥石流核密度'
+    });
+    map.add(csv4);
+    const csv5 = new CSVLayer({
+        url: '../portal/csv/5sin.csv',
+        // popupTemplate: template,
+        renderer: renderer,
+        opacity:0.85,
+        visible:false,
+        title:'滑地面塌陷点核密度'
+    });
+    map.add(csv5);
+    var csvGroupLayer = new GroupLayer({
+        title: "热力图",
+        visibilityMode: "exclusive",
+        layers: [csv5,csv4,csv3,csv2],
+        opacity: 0.85,
         visible:false
     });
-    map.add(layer,2);
-
+    map.add(csvGroupLayer);
 
 
     var layerList = new LayerList({
