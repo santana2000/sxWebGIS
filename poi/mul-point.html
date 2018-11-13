@@ -22,26 +22,33 @@
         require([
             "esri/Map",
             "esri/views/MapView",
+            "esri/layers/FeatureLayer",
 
             "esri/geometry/Multipoint"
-        ], function(Map, MapView,Multipoint) {
+        ], function(Map, MapView,FeatureLayer,Multipoint) {
 
             var map = new Map({
-                basemap: "streets"
+                basemap: "topo"
             });
 
             var view = new MapView({
                 container: "viewDiv",
                 map: map,
-                zoom: 4,
-                center: [15, 65] // longitude, latitude
+                zoom: 6,
+                center: [112.537674, 37.871594] // longitude, latitude
             });
 
-            var mpJson ={"points":[[115.42,36.75],[115.12,36.25],[116.12,36.05]],
-                         "spatialReference":({" wkid":4326 })};
-            var multipoint = new Multipoint(mpJson);
-
-            map.add(multipoint);
+            // var mpJson ={"points":[[115.42,36.75],[115.12,36.25],[116.12,36.05]],
+            //              "spatialReference":({" wkid":4326 })};
+            // var multipoint = new Multipoint(mpJson);
+            //
+            // map.add(multipoint);
+            var poiLayer = new FeatureLayer({
+                url: "https://localhost:6443/arcgis/rest/services/sxlayer/POI/MapServer",
+                outFields: ["*"],
+                title:"poi",
+            });
+            map.add(poiLayer);
 
         });
     </script>
