@@ -5,7 +5,10 @@ var data = [
     {name: '大同', value: 58},
     {name: '临汾', value: 47},
     {name: '太原', value: 39},
-    {name: '阳泉', value: 31}
+    {name: '阳泉', value: 31},
+    {name: '晋城', value: 70},
+    {name: '平遥', value: 20},
+    {name: '吕梁', value: 10},
     ];
 
 var geoCoordMap = {
@@ -13,7 +16,10 @@ var geoCoordMap = {
     '大同':[113.3,40.12],
     '长治':[113.08,36.18],
     '临汾':[111.5,36.08],
-    '太原':[112.53,37.87]
+    '太原':[112.53,37.87],
+    '晋城':[112.43,36.87],
+    '平遥':[112.03,37.37],
+    '吕梁':[112.53,37.37],
 }
 
 var convertData = function (data) {
@@ -23,7 +29,7 @@ var convertData = function (data) {
         if (geoCoord) {
             res.push({
                 name: data[i].name,
-                value: geoCoord.concat(data[i].value)
+                value: geoCoord.concat(data[i].value)   //新值= 坐标+旧值；
             });
         }
     }
@@ -40,7 +46,8 @@ option = {
         }
     },
     tooltip: {
-        trigger: 'item'
+        trigger: 'item',
+        formatter:'{a} <br/> {c}'
     },
     //图例
     legend: {
@@ -77,8 +84,10 @@ option = {
         coordinateSystem: 'geo',
         data: convertData(data.sort(function (a, b) {
             return b.value - a.value;
-        }).slice(0, 4)),
-        symbolSize: 22,
+        }).slice(0, 8)),    //选取从 start 到数组结尾的所有元素，该方法并不会修改数组，而是返回一个子数组
+        symbolSize: function (val) {
+            return val[2] / 2;
+        },
         showEffectOn: 'render',
         rippleEffect: {
             brushType: 'stroke'

@@ -16,10 +16,11 @@ html,body {
 
 /*标题栏*/
 .header {
-    width: 640px;
-    height: 80px;
+    width: 900px;
+    height: 150px;
     color: white;
-    background: url("bg-image.png");
+    background: url("last.png") no-repeat;
+    background-size: 80%;
     font-size: 1.6em;
     border-radius:10px;
     text-align: center;
@@ -28,7 +29,7 @@ html,body {
     top:5px;
     left: 5px;
     z-index: 2;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.36);
+    /*box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.36);*/
 }
 .gisFunc {
     width: 150px;

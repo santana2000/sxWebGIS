@@ -657,7 +657,7 @@ require([
         //templateOptions:templateOptions,
         //printServiceUrl: "https://utility.arcgisonline.com/arcgis/rest/services/Utilities/PrintingTools/GPServer/Export%20Web%20Map%20Task"
         printServiceUrl: "https://localhost:6443/arcgis/rest/services/Utilities/PrintingTools/GPServer/Export%20Web%20Map%20Task"
-
+                          //https://localhost:6443/arcgis/rest/services/Utilities/PrintingTools/GPServer
     });
     // //地图打印
     // var templateOptions = new TemplateOptions({
