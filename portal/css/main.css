@@ -32,8 +32,8 @@ html,body {
     /*box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.36);*/
 }
 .gisFunc {
-    width: 150px;
-    padding: 10px 0 10px 0;
+    width: 125px;
+    padding: 5px 0 10px 0;
     position: fixed;
     top: 250px;
     left: 10px;
@@ -41,7 +41,7 @@ html,body {
     z-index: 3;
     border-radius:10px;
     color: #151719;
-    font-size: 1.2em;
+    font-size: 1em;
     text-align: center;
     background: rgba(0, 0, 0, 0.04);
     /*border: black solid 0.1px;*/
@@ -67,11 +67,11 @@ html,body {
     z-index: 3;
 }
 .gis {
-    padding: 3px 0 10px 0;
+    padding: 3px 0 0px 0;
 
 }
 .gis:hover {
-    background: rgba(118, 114, 118, 0.53);
+    background: rgba(149, 145, 149, 0);
 }
 .analyse {
     list-style: none;
@@ -81,7 +81,7 @@ html,body {
     color: rgba(11, 25, 37, 0.87);
     font-size: 0.8em;
     list-style: none;
-    background: rgba(166, 172, 178, 0.38);
+    background: rgba(149, 145, 149, 0.36);
     padding-left: 35px;
     padding-bottom: 5px;
     text-align: left;

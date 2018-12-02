@@ -1,6 +1,10 @@
 var myChart = echarts.init(document.getElementById('sxmap'));
 
-var data = [
+
+// 注意引入版本
+// 注意不同版本使用差别
+
+var data = [                        //元素为对象的数组
     {name: '长治', value: 41},
     {name: '大同', value: 58},
     {name: '临汾', value: 47},
@@ -11,7 +15,7 @@ var data = [
     {name: '吕梁', value: 10},
     ];
 
-var geoCoordMap = {
+var geoCoordMap = {                 //对象
     '阳泉':[113.57,37.85],
     '大同':[113.3,40.12],
     '长治':[113.08,36.18],
@@ -33,24 +37,26 @@ var convertData = function (data) {
             });
         }
     }
-    return res;
+    return res;                                         // [113.57, 37.85, 31]
 };
 
 option = {
     backgroundColor: '#404a59',
     title: {
-        text: '严重矿山灾害点分布',
+        text: '矿山灾害点危险性展示',
         left: 'center',
         textStyle: {
-            color: '#fff'
+            color: '#fff',
+            fontSize:25
         }
     },
-    tooltip: {
+    tooltip: {           //提示框组件
         trigger: 'item',
-        formatter:'{a} <br/> {c}'
+        formatter:'{b} <br/> ',  //{c@[2]}
+        show:false
     },
-    //图例
-    legend: {
+
+    legend: {            //图例
         orient: 'vertical',
         y: 'bottom',
         x: 'right',
@@ -67,7 +73,8 @@ option = {
             }
         },
         roam: true,
-        zoom:3,
+        center:[112.38,37.67],
+        zoom:7,
         itemStyle: {
             normal: {
                 areaColor: "#323c48",
@@ -79,14 +86,14 @@ option = {
         }
     },
     series: [{
-        name: 'Top 5',
+        name: '危险指数：',
         type: 'effectScatter',
         coordinateSystem: 'geo',
         data: convertData(data.sort(function (a, b) {
             return b.value - a.value;
         }).slice(0, 8)),    //选取从 start 到数组结尾的所有元素，该方法并不会修改数组，而是返回一个子数组
         symbolSize: function (val) {
-            return val[2] / 2;
+            return val[2] / 2;        //res数组中的第三个元素
         },
         showEffectOn: 'render',
         rippleEffect: {
@@ -95,8 +102,11 @@ option = {
         hoverAnimation: true,
         label: {
             normal: {
-                formatter: '{b}',
+                formatter: '{@2}',
                 position: 'right',
+                show: false
+            },
+            emphasis: {
                 show: true
             }
         },
@@ -112,3 +122,13 @@ option = {
     ]
 };
 myChart.setOption(option);
+
+
+/*
+
+a(); 执行一次绘制地图
+$(window).resize(function() {   窗口缩放一次
+    map.resize();               地图画布缩放一次
+    a()                         地图再绘制一次
+
+    */
